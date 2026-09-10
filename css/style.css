@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: azure;
+}
+
+footer{
+    background-color: #0F172B;
+    color: white;
+    padding-bottom: 30px;
+}
+.footer-content{
+    padding-top: 40px;
+    display: flex; /* Выстраивает вложенные блоки в один ряд */
+    justify-content: space-between; /* Равномерно распределяет колонки по ширине */
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Убирает точки со списка*/
+.column ul{
+    list-style: none;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.column li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+.column .col-title{
+    color: rgba(255,255,255,1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column a{
+    text-decoration: none; /* Убирает нижнее подчеркивание */
+    color: rgba(255,255,255,0.7);
+}
+
+.column p{
+    color: rgba(255,255,255,0.7);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom: 15px;
+}
+.logo img{
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.1); /* Прозрачность 1px это сама длина, 0.1 это на сколько видно прозрачность */
+    padding-top: 20px; /* Отступ внутри блока чтобы сам копирайтер не влип в линию*/
+    margin-top: 40px; /* Отступ снаружи чтобы отдвигнуть сами колонки*/
+    text-align: center;
+    color: rgba(255,255,255,0.2);
+}
