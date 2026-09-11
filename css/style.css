@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: black;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #1E293B;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: #2563EB;
+    background-color: #DBEAFE;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+footer{
+    background-color: #0F172B;
+    color: white;
+    padding-bottom: 30px;
+}
+.footer-content{
+    padding-top: 40px;
+    display: flex; /* Выстраивает вложенные блоки в один ряд */
+    justify-content: space-between; /* Равномерно распределяет колонки по ширине */
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Убирает точки со списка*/
+.column ul{
+    list-style: none;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.column li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+.column .col-title{
+    color: rgba(255,255,255,1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column a{
+    text-decoration: none; /* Убирает нижнее подчеркивание */
+    color: rgba(255,255,255,0.7);
+}
+
+.column p{
+    color: rgba(255,255,255,0.7);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom: 15px;
+}
+.logo img{
+    width: 32px;
+    height: 32px;
+}
+
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.1); /* Прозрачность 1px это сама длина, 0.1 это на сколько видно прозрачность */
+    padding-top: 20px; /* Отступ внутри блока чтобы сам копирайтер не влип в линию*/
+    margin-top: 40px; /* Отступ снаружи чтобы отдвигнуть сами колонки*/
+    text-align: center;
+    color: rgba(255,255,255,0.2);
+}
+
+.contact-info h2{
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.contact-info p{
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.contact-section {
+    padding: 60px 24px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.contact-form-wrapper {
+    flex: 1;
+}
