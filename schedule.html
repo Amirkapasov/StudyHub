@@ -1,3 +1,8 @@
+<!--
+    Student: Yeskendir Abraimov
+    Page: Schedule
+    Assignment: Front-End Assignment #1 (HTML & CSS Basics)
+-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,21 +10,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>StudyHub | Schedule</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
+    <header >
 
         <nav class = 'navbar'>
 
-            <div class = "logo">
+            <a href="index.html" class="logo">
 
-                <img src="images/logoWhite.png" alt="StudyHub">
-                <span class="logo-text">StudyHub</span>
+                <img src="images/logo.png" alt="StudyHub">
+                <span class="logo-text-header">StudyHub</span>
 
-            </div>
+            </a>
 
             <ul class = 'nav-links'>
 
@@ -33,7 +38,102 @@
         </nav>
 
     </header>
+    <main>
 
+        <section class="page-header">
+
+            <h1>Weekly Schedule</h1>
+            <p>Stay organized and manage your academic week</p>
+
+        </section>
+
+        <section class = 'schedule-section'>
+
+            <table class="schedule-table">
+
+                <thead>
+
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>09:00 – 10:30</td>
+                    <td><span class="badge badge-web">Web Technologies</span></td>
+                    <td><span class="badge badge-prog">Programming</span></td>
+                    <td><span class="badge badge-math">Mathematics</span></td>
+                    <td><span class="badge badge-eng">English</span></td>
+                    <td><span class="badge badge-db">Database Systems</span></td>
+                </tr>
+
+                <tr>
+
+                    <td>11:00 – 12:30</td>
+                    <td><span class="badge badge-math">Mathematics</span></td>
+                    <td><span class="badge badge-db">Database Systems</span></td>
+                    <td><span class="badge badge-web">Web Technologies</span></td>
+                    <td><span class="badge badge-prog">Programming</span></td>
+                    <td><span class="badge badge-eng">English</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>14:00 – 15:30</td>
+                    <td><span class="badge badge-prog">Programming</span></td>
+                    <td><span class="badge badge-eng">English</span></td>
+                    <td><span class="badge badge-db">Database Systems</span></td>
+                    <td><span class="badge badge-web">Web Technologies</span></td>
+                    <td><span class="badge badge-math">Mathematics</span></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="legend">
+
+            <span class="badge badge-web">Web Technologies</span>
+            <span class="badge badge-prog">Programming</span>
+            <span class="badge badge-math">Mathematics</span>
+            <span class="badge badge-eng">English</span>
+            <span class="badge badge-db">Database Systems</span>
+
+        </div>
+
+        <section class="dates-section">
+            <div class="dates-card">
+                <h2><span class="tips-icon">📅</span> Important Dates</h2>
+                <ul class="dates-list">
+                    <li>
+                        <span class="date-range">Oct 5 – Oct 10</span>
+                        <span class="date-label">Midterm Exams</span>
+                    </li>
+                    <li>
+                        <span class="date-range">Nov 9 – Nov 15</span>
+                        <span class="date-label">Endterm Exams</span>
+                    </li>
+                    <li>
+                        <span class="date-range">Nov 16 – Nov 30</span>
+                        <span class="date-label">Final Exams</span>
+                    </li>
+                    <li>
+                        <span class="date-range">Dec 1 – Dec 8</span>
+                        <span class="date-label">Winter Break</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
     <footer>
         <div class = 'footer-content'> <!-- Колонки с навигацой-->
 
@@ -42,12 +142,10 @@
 
                 <div class = 'logo'>
                     <img src = 'images/logo.png' alt = 'StudyHub'>
-                    <span class = 'logo-text'>StudyHub</span>
+                    <span class = 'logo-text-footer'>StudyHub</span>
                 </div>
 
-                <p>A student-focused educational website</p>
-                <p>designed to make academic life easier</p>
-                <p> and more organized.</p>
+                <p>A student-focused educational website designed to make academic life easier and more organized.</p>
             </div>
 
             <!-- Вторая колонка наша команда-->
