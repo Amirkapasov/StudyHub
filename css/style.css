@@ -1,10 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 a {
     text-decoration: none;
 }
@@ -77,71 +70,7 @@ header .logo {
     border-radius: 8px;
 }
 
-footer{
-    background-color: #0F172B;
-    color: white;
-    padding-bottom: 30px;
-}
-.footer-content{
-    padding: 40px 30px 0;
-    display: flex; /* Выстраивает вложенные блоки в один ряд */
-    justify-content: space-between; /* Равномерно распределяет колонки по ширине */
-    max-width: 1400px;
-    margin: auto;
-}
 
-.footer-content .column:first-child {
-    max-width: 300px;
-}
-
-/* Убирает точки со списка*/
-.column ul{
-    list-style: none;
-}
-.logo-text-header {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0F172B;
-
-
-}
-.logo-text-footer {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-.column li{
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: rgba(255,255,255,0.7);
-}
-.column .col-title{
-    color: rgba(255,255,255,1);
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.column a{
-    text-decoration: none; /* Убирает нижнее подчеркивание */
-    color: rgba(255,255,255,0.7);
-
-}
-
-.column p{
-    color: rgba(255,255,255,0.7);
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap:12px;
-    margin-bottom: 15px;
-}
-.logo img{
-    width: 32px;
-    height: 32px;
-}
 
 main .contact-info img {
     border-radius: 16px;
@@ -381,3 +310,243 @@ main .contact-info img {
 .date-label {
     color: #475569;
 }
+
+
+/* МОЯ ЧАСТЬ АМИР КАПАСОВ, ЕСКЕНДИР НЕ ЛАЗИТЬ ЗАПРЕЩЕННО ОПАСНО ДЛЯ ЖИЗНИ*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    background-color: #0F172B;
+    color: white;
+    padding-bottom: 30px;
+}
+.footer-content{
+    padding: 40px 30px 0;
+    display: flex; /* Выстраивает вложенные блоки в один ряд */
+    justify-content: space-between; /* Равномерно распределяет колонки по ширине */
+    max-width: 1400px;
+    margin: auto;
+}
+
+.footer-content .column:first-child {
+    max-width: 300px;
+}
+
+/* Убирает точки со списка*/
+.column ul{
+    list-style: none;
+}
+.logo-text-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0F172B;
+
+
+}
+.logo-text-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.column li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+.column .col-title{
+    color: rgba(255,255,255,1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column a{
+    text-decoration: none; /* Убирает нижнее подчеркивание */
+    color: rgba(255,255,255,0.7);
+
+}
+
+.column p{
+    color: rgba(255,255,255,0.7);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom: 15px;
+}
+.logo img{
+    width: 32px;
+    height: 32px;
+}
+
+.container-index {
+    max-width: 520px;
+}
+
+.container-index .badge{
+    display: inline-block;              /* Размер точно по содержимому */
+    background-color: #e6eeff;          /* Очень светлый синий фон */
+    color: #2563eb;                     /* цвет текста */
+    font-size: 13px;                    /* Мелкий размер шрифта */
+    font-weight: 700;                   /* Жирное написание */
+    padding: 8px 16px;                  /* Отступы внутри плашки */
+    border-radius: 20px;                /* Полностью овальные края */
+    margin-bottom: 24px;                /* Отступ снизу до заголовка */
+    letter-spacing: 0.5px;              /* Разрежение между буквами */
+}
+
+.container-index .blue-text{
+    color: #2563EB;
+}
+
+.container-index .main-description{
+    font-size: 18px;
+    line-height: 1.6; /* Растояние между строк */
+    color: #475569;
+    margin: 0 0 32px 0;
+}
+
+.container-index .button-group {
+    display: flex;
+    gap:16px;
+}
+
+/* Еска я у тебя скопировал ес че, обьясний пожалуйста*/
+.container-index .btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.container-index-right .index-img{
+    width: 50%;
+    border-radius: 24px;
+    display: block;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    margin: -250px 0 0 800px;
+
+}
+
+
+.index {
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;            /* Ограничение ширины для аккуратного вида */
+    margin: 60px auto;            /* Отступ сверху/снизу 60px, по бокам авто-центрирование */
+    padding: 0 24px;              /* Внутренние отступы безопасности по краям */
+    gap: 250px;                    /* Расстояние МЕЖДУ левым текстом и правой картинкой */
+}
+
+
+
+
+/* Ну тут много че для курсес хтмл*/
+
+.course{
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.course-card{
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+.card-img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card-text{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    background-color: #e6eeff;
+    color: #2563eb;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+.card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.topics-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+.topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+.topics-list li {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+/* Еска я у тебя скопировал ес че, обьясний пожалуйста*/
+.card-text .btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+
+
