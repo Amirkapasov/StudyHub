@@ -5,8 +5,42 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    background-color: azure;
+h2 {
+    color: black;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #1E293B;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: #2563EB;
+    background-color: #DBEAFE;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 footer{
@@ -70,4 +104,31 @@ footer{
     margin-top: 40px; /* Отступ снаружи чтобы отдвигнуть сами колонки*/
     text-align: center;
     color: rgba(255,255,255,0.2);
+}
+
+.contact-info h2{
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.contact-info p{
+    margin-bottom: 12px;
+    color: #475569;
+}
+
+.contact-section {
+    padding: 60px 24px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.contact-form-wrapper {
+    flex: 1;
 }
