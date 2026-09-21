@@ -22,6 +22,7 @@ h2 {
 }
 
 header {
+    z-index: 100;
     background-color: white;
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
     position: sticky;
@@ -227,6 +228,7 @@ main .contact-info img {
 }
 
 .schedule-table {
+    min-width: 700px;
     width: 100%;
     border-collapse: collapse;
     background: white;
@@ -436,6 +438,9 @@ footer{
 
 
 .container-index-right .index-img{
+    aspect-ratio: 1 / 1;
+    max-width: 500px;
+    object-fit: cover;
     width: 100%;
     border-radius: 50%;
     display: block;
@@ -465,6 +470,7 @@ footer{
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+    justify-content: center;
 }
 
 .course-card{
@@ -475,6 +481,7 @@ footer{
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
+    max-width: 380px;
 }
 .card-img{
     width: 100%;
@@ -534,6 +541,7 @@ footer{
 
 /* Еска я у тебя скопировал ес че, обьясний пожалуйста*/
 .card-text .btn {
+    margin-top: auto;
     width: 100%;
     padding: 14px;
     background-color: #2563EB;
@@ -673,6 +681,7 @@ footer{
 @media (max-width: 900px) {
     .layout {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas:
                 'header'
                 'sidebar'
@@ -685,7 +694,6 @@ footer{
     }
 
     .index,
-    .course,
     .contact-container,
     .footer-content {
         flex-direction: column;
