@@ -436,22 +436,21 @@ footer{
 
 
 .container-index-right .index-img{
-    width: 50%;
-    border-radius: 24px;
+    width: 100%;
+    border-radius: 50%;
     display: block;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    margin: -250px 0 0 800px;
-
 }
 
 
 .index {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;            /* Ограничение ширины для аккуратного вида */
     margin: 60px auto;            /* Отступ сверху/снизу 60px, по бокам авто-центрирование */
     padding: 0 24px;              /* Внутренние отступы безопасности по краям */
-    gap: 250px;                    /* Расстояние МЕЖДУ левым текстом и правой картинкой */
+    gap: 60px;                    /* Расстояние МЕЖДУ левым текстом и правой картинкой */
 }
 
 
@@ -550,3 +549,166 @@ footer{
 
 
 
+
+/* Ховер на карточках курсов */
+.course-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card-text .btn:hover,
+.container-index .btn:hover {
+    background-color: #1D4ED8;
+}
+
+
+/* Grid раскладка страницы курсов: шапка сверху, сайдбар слева, контент справа, футер снизу */
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+            'header  header'
+            'sidebar main'
+            'footer  footer';
+    min-height: 100vh;
+}
+
+.layout > header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #F1F5F9;
+    padding: 32px 24px;
+}
+
+.layout > main {
+    grid-area: main;
+}
+
+.layout > footer {
+    grid-area: footer;
+}
+
+.sidebar .col-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0F172B;
+    margin-bottom: 16px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.sidebar li {
+    font-size: 14px;
+    color: #475569;
+    padding: 8px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.sidebar a {
+    color: #475569;
+}
+
+.sidebar a:hover {
+    color: #2563EB;
+}
+
+
+/* Галерея на гриде */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.gallery-item {
+    position: relative;      /* Чтобы подпись легла поверх картинки */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(15, 23, 43, 0.65);
+    color: white;
+    font-weight: 600;
+    opacity: 0;                      /* Прячем пока не навели мышкой */
+    transition: opacity 0.25s;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+
+/* Адаптив под планшет и телефон */
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                'header'
+                'sidebar'
+                'main'
+                'footer';
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .index,
+    .course,
+    .contact-container,
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .schedule-section {
+        overflow-x: auto;
+    }
+}
