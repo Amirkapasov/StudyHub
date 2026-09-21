@@ -460,6 +460,7 @@ footer{
 
 .course{
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     max-width: 1200px;
     margin: 40px auto;
@@ -467,7 +468,7 @@ footer{
 }
 
 .course-card{
-    flex: 1;
+    flex: 1 1 300px;
     background-color: #ffffff;
     border-radius: 20px;
     overflow: hidden;
