@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StudyHub | Home</title>
+    <title>StudyHub | Gallery</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,10 +23,10 @@
 
         <ul class = 'nav-links'>
 
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="courses.html">Courses</a></li>
             <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
 
         </ul>
@@ -34,46 +34,67 @@
     </nav>
 
 </header>
-<div class = 'index'>
-    <div class = 'container-index'>
-        <!-- Левая сторона -->
-        <div class = 'badge'>
-            <span class = 'start'>★</span>FOR UNIVERSITY STUDENTS
+
+<main>
+
+    <section class="page-header">
+
+        <h1>Gallery</h1>
+        <p>Photos from our student life.</p>
+
+    </section>
+
+    <!-- Сетка с картинками, подпись появляется при наведении -->
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="images/for_index.jpg" alt="Study room">
+            <span class="gallery-caption">Study room</span>
         </div>
 
-        <h1 class = 'main-title'>
-            Study smarter with <span class="blue-text">StudyHub.</span>
-        </h1>
-
-        <p class = 'main-description'>
-            Everything you need to organize your university life in<br>
-            one place. Track courses, manage your schedule,<br>
-            and find study resources.
-        </p>
-
-        <div class="button-group">
-            <a class="btn" href="courses.html">Explore Courses</a>
-            <a class="btn" href="schedule.html">View Schedule</a>
+        <div class="gallery-item">
+            <img src="images/course1.jpeg" alt="Web Technologies lesson">
+            <span class="gallery-caption">Web lesson</span>
         </div>
+
+        <div class="gallery-item">
+            <img src="images/people.avif" alt="Group work">
+            <span class="gallery-caption">Group work</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/course2.jpeg" alt="Programming lab">
+            <span class="gallery-caption">Programming lab</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/course3.jpeg" alt="Database lecture">
+            <span class="gallery-caption">Database lecture</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/for_index.jpg" alt="Library">
+            <span class="gallery-caption">Library</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/people.avif" alt="Team project">
+            <span class="gallery-caption">Team project</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/course1.jpeg" alt="Exam week">
+            <span class="gallery-caption">Exam week</span>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/course2.jpeg" alt="Campus life">
+            <span class="gallery-caption">Campus life</span>
+        </div>
+
     </div>
-    <!-- Правая сторона картинка -->
-    <div class = 'container-index-right'>
-        <img src = 'images/for_index.jpg' alt="Studying" class="index-img">
-    </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+</main>
 
 <footer>
     <div class = 'footer-content'> <!-- Колонки с навигацой-->
