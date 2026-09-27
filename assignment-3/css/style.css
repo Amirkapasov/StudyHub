@@ -1,0 +1,72 @@
+/* Bootstrap controls layouts, margins and paddings. This file keeps our look. */
+body {
+    font-family: Arial, sans-serif;
+    color: #17243b;
+    background-color: #f5f7fb;
+}
+
+.brand-logo {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+}
+
+.page-banner,
+.site-footer {
+    background-color: #0f172b;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card-img-top {
+    height: 190px;
+    object-fit: cover;
+}
+
+.contact-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.carousel-photo {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: #0f172b;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0f172b;
+    border-radius: 50%;
+    background-size: 65%;
+}
+
+.schedule-table {
+    min-width: 700px;
+}
+
+/* Keep section headings visible below the sticky navigation after a jump. */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .carousel-photo { height: 300px; }
+}

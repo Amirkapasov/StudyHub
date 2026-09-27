@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>StudyHub | Courses</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+        <a href="#main" class="visually-hidden-focusable position-absolute z-3 bg-white p-3">Skip to content</a>
+        <!-- Task 5: lg = show the full menu from 992px. -->
+        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                    <img class="brand-logo" src="images/logo.png" alt="">
+                    StudyHub
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto gap-lg-2">
+                        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-semibold" href="courses.html" aria-current="page">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link " href="schedule.html">Schedule</a></li>
+                        <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link " href="media-queries.html">Study Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" class="flex-grow-1" tabindex="-1">
+        <section class="page-banner text-white text-center py-5">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-3">My Courses</h1>
+                <p class="lead mb-0">Explore your current academic subjects.</p>
+            </div>
+        </section>
+        <div class="container py-4 py-lg-5">
+            <!-- Bootstrap grid: sidebar above the content on smaller screens. -->
+            <div class="row g-4">
+                <aside class="col-12 col-lg-3" aria-label="Course information">
+                    <div class="bg-primary-subtle rounded-3 p-4">
+                        <h2 class="h5">Categories</h2>
+                        <ul class="ps-3 mb-4">
+                            <li>Web Technologies</li>
+                            <li>Programming</li>
+                            <li>Database Systems</li>
+                            <li>Mathematics</li>
+                            <li>English</li>
+                        </ul>
+                        <h2 class="h5">Useful links</h2>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a class="link-dark" href="schedule.html">Weekly schedule</a></li>
+                            <li class="mb-2"><a class="link-dark" href="gallery.html">Campus gallery</a></li>
+                            <li><a class="link-dark" href="contact.html">Ask a question</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="col-12 col-lg-9">
+                    <!-- Task 8: a Bootstrap card-group with images, titles and descriptions. -->
+                <div class="card-group flex-column flex-md-row mb-4">
+                    <article class="card">
+                        <img src="images/course1.jpeg" class="card-img-top" alt="Web Technologies" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <p class="small fw-bold text-primary mb-2">COURSE</p>
+                            <h2 class="card-title h4">Web Technologies</h2>
+                            <p class="card-text text-body-secondary">Learn the fundamentals of modern web development from the ground up.</p>
+                            <h3 class="h6">Topics</h3>
+                            <ul class="ps-3 mb-4">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Web Design</li>
+                                <li>Responsive Layout</li>
+                            </ul>
+                            <a class="btn btn-primary mt-auto" href="contact.html">Ask about this course</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="images/course2.jpeg" class="card-img-top" alt="Programming" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <p class="small fw-bold text-primary mb-2">COURSE</p>
+                            <h2 class="card-title h4">Programming</h2>
+                            <p class="card-text text-body-secondary">Master core programming concepts and problem-solving techniques.</p>
+                            <h3 class="h6">Topics</h3>
+                            <ul class="ps-3 mb-4">
+                                <li>Variables &amp; Types</li>
+                                <li>Control Flow</li>
+                                <li>Functions</li>
+                                <li>OOP</li>
+                            </ul>
+                            <a class="btn btn-primary mt-auto" href="contact.html">Ask about this course</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="images/course3.jpeg" class="card-img-top" alt="Database Systems" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <p class="small fw-bold text-primary mb-2">COURSE</p>
+                            <h2 class="card-title h4">Database Systems</h2>
+                            <p class="card-text text-body-secondary">Understand database design, SQL, and relational data management.</p>
+                            <h3 class="h6">Topics</h3>
+                            <ul class="ps-3 mb-4">
+                                <li>SQL Queries</li>
+                                <li>ER Diagrams</li>
+                                <li>Normalization</li>
+                                <li>CRUD</li>
+                            </ul>
+                            <a class="btn btn-primary mt-auto" href="contact.html">Ask about this course</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="card-group flex-column flex-md-row mb-4">
+                    <article class="card">
+                        <img src="images/for_index.jpg" class="card-img-top" alt="Mathematics" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <p class="small fw-bold text-primary mb-2">COURSE</p>
+                            <h2 class="card-title h4">Mathematics</h2>
+                            <p class="card-text text-body-secondary">Build a strong base in calculus, algebra and discrete math.</p>
+                            <h3 class="h6">Topics</h3>
+                            <ul class="ps-3 mb-4">
+                                <li>Limits &amp; Derivatives</li>
+                                <li>Matrices</li>
+                                <li>Probability</li>
+                                <li>Discrete Math</li>
+                            </ul>
+                            <a class="btn btn-primary mt-auto" href="contact.html">Ask about this course</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <img src="images/people.avif" class="card-img-top" alt="English" loading="lazy">
+                        <div class="card-body d-flex flex-column p-4">
+                            <p class="small fw-bold text-primary mb-2">COURSE</p>
+                            <h2 class="card-title h4">English</h2>
+                            <p class="card-text text-body-secondary">Improve academic English for study, writing and presentations.</p>
+                            <h3 class="h6">Topics</h3>
+                            <ul class="ps-3 mb-4">
+                                <li>Academic Writing</li>
+                                <li>Speaking</li>
+                                <li>Vocabulary</li>
+                                <li>Presentations</li>
+                            </ul>
+                            <a class="btn btn-primary mt-auto" href="contact.html">Ask about this course</a>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-5">
+                    <a class="d-flex align-items-center gap-2 text-white text-decoration-none fs-4 fw-bold mb-3" href="index.html">
+                        <img class="brand-logo" src="images/logo.png" alt=""> StudyHub
+                    </a>
+                    <p>A student-focused educational website designed to make academic life easier and more organized.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h2 class="h5 mb-3">Our team</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">Amir Kapassov</li>
+                        <li>Yeskendir Abraimov</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h2 class="h5 mb-3">Pages</h2>
+                    <ul class="list-unstyled mb-0">
+                            <li class="mb-2"><a class="link-light" href="index.html">Home</a></li>
+                            <li class="mb-2"><a class="link-light" href="courses.html">Courses</a></li>
+                            <li class="mb-2"><a class="link-light" href="schedule.html">Schedule</a></li>
+                            <li class="mb-2"><a class="link-light" href="gallery.html">Gallery</a></li>
+                            <li class="mb-2"><a class="link-light" href="contact.html">Contact</a></li>
+                            <li class="mb-2"><a class="link-light" href="media-queries.html">Study Tips</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="border-top border-secondary text-center mt-4 pt-3 mb-0"><small>&copy; 2026 StudyHub. Educational Project.</small></p>
+        </div>
+    </footer>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>
