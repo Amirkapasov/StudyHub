@@ -1,126 +1,309 @@
-/* Tasks 1-2. Mobile first: the base rules apply at every width. */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #17243b;
-    background: #f5f7fb;
-}
-
 a {
-    color: #174fbe;
-}
-
-a:focus-visible {
-    outline: 3px solid #2563eb;
-    outline-offset: 4px;
-}
-
-header {
-    background: white;
-    border-bottom: 1px solid #dbe2ee;
-}
-
-.navigation {
-    max-width: 1140px;
-    margin: auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
-}
-
-.brand {
-    margin-right: auto;
-    font-size: 24px;
-    font-weight: bold;
     text-decoration: none;
 }
 
-[aria-current="page"] {
-    font-weight: bold;
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+
 }
 
 main {
-    max-width: 1140px;
-    margin: auto;
-    padding: 40px 20px 60px;
-}
-
-.intro {
-    max-width: 720px;
-    margin-bottom: 32px;
-}
-
-h1 {
-    font-size: 28px;
-    line-height: 1.15;
+    flex: 1;
 }
 
 h2 {
-    font-size: 20px;
+    color: black;
 }
 
-p {
-    font-size: 16px;
+header .logo img {
+    border-radius: 10px;
 }
 
-.eyebrow {
-    color: #174fbe;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
+header .logo {
+    text-decoration: none;
+    margin-bottom: 0;
 }
 
-.tips-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.tip-card {
-    min-width: 0;
-    overflow: hidden;
-    border: 1px solid #dbe2ee;
-    border-radius: 16px;
-    background: white;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
 }
 
-.tip-card img {
-    display: block;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.nav-links a {
+    color: #1E293B;
+    font-weight: 500;
+    transition: color 0.2s;
+
 }
 
-.tip-content {
-    padding: 24px;
+.nav-links a:hover {
+    color: #2563EB;
+}
+
+.nav-links a.active {
+    color: #1d4ed8;
+    background-color: #DBEAFE;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    margin-top: 40px;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+
+}
+
+.page-header {
+    background-color: #0F172B;
+    color: white;
+    text-align: center;
+    padding: 60px 24px;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-header h1 {
+    color: white;
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: rgba(255,255,255,0.7);
+}
+
+.schedule-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
-    padding: 24px 20px;
+    background-color: #0F172B;
     color: white;
-    background: #0f172b;
+    padding-bottom: 30px;
+}
+
+.footer-content {
+    padding: 40px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.footer-content .column:first-child {
+    max-width: 300px;
+}
+
+.column ul {
+    list-style: none;
+}
+
+.logo-text-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0F172B;
+
+}
+
+.logo-text-footer {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.column li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+
+.column .col-title {
+    color: rgba(255,255,255,1);
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.column a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.7);
+
+}
+
+.column p {
+    color: rgba(255,255,255,0.7);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+}
+
+.course {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.course-card {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-badge {
+    align-self: flex-start;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    background-color: #e6eeff;
+    color: #1d4ed8;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.topics-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.topics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+}
+
+.topics-list li {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.card-text .btn {
+    margin-top: auto;
+    width: 100%;
+    padding: 14px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-/* Tablet: two cards in a row and medium-sized text. */
+.course-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar .col-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0F172B;
+    margin-bottom: 16px;
+}
+
+/* Tasks 1-2: one, two and three columns using only our media queries. */
+.course { display: grid; grid-template-columns: 1fr; }
+.course-card { max-width: none; }
+.page-header h1 { font-size: 28px; }
+.page-header p, .card-desc { font-size: 14px; }
+.demo-back { text-align: center; margin-bottom: 24px; }
 @media (min-width: 768px) {
-    h1 { font-size: 38px; }
-    h2 { font-size: 22px; }
-    p { font-size: 17px; }
-    .tips-grid { grid-template-columns: repeat(2, 1fr); }
+    .course { grid-template-columns: repeat(2, 1fr); }
+    .page-header h1 { font-size: 32px; }
+    .page-header p, .card-desc { font-size: 15px; }
 }
-
-/* Desktop: three cards in a row and larger text. */
 @media (min-width: 992px) {
-    h1 { font-size: 48px; }
-    h2 { font-size: 24px; }
-    p { font-size: 18px; }
-    .tips-grid { grid-template-columns: repeat(3, 1fr); }
+    .course { grid-template-columns: repeat(3, 1fr); }
+    .page-header h1 { font-size: 36px; }
+    .page-header p, .card-desc { font-size: 16px; }
+}
+@media (max-width: 767px) {
+    .navbar, .footer-content { flex-direction: column; gap: 24px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
 }

@@ -1,68 +1,142 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <title>StudyHub | Study Tips</title>
-    <!-- Tasks 1-2: this page uses only our CSS, without Bootstrap. -->
-    <link rel="stylesheet" href="css/media-queries.css">
-</head>
-<body>
-    <header>
-        <nav class="navigation" aria-label="Main navigation">
-            <a class="brand" href="index.html">StudyHub</a>
-            <a href="index.html">Home</a>
-            <a href="courses.html">Courses</a>
-            <a href="schedule.html">Schedule</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-            <a href="media-queries.html" aria-current="page">Study Tips</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="intro">
-            <p class="eyebrow">A LITTLE PLANNING GOES A LONG WAY</p>
-            <h1>Build better study habits.</h1>
-            <p>Make space for learning, stay consistent, and find a rhythm that works for you.</p>
-        </section>
-
-        <!-- Task 2: 1 column on mobile, 2 on tablet, 3 on desktop. -->
-        <section class="tips-grid" aria-label="Three study tips">
-            <article class="tip-card">
-                <img src="images/library.jpg" alt="A student holding notebooks in a classroom">
-                <div class="tip-content">
-                    <p class="eyebrow">01 / PLAN</p>
-                    <h2>Set one clear goal</h2>
-                    <p>Choose a small task before each study session. A clear goal makes it easier to get started.</p>
-                    <a href="schedule.html">Plan your week &rarr;</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>StudyHub | Media Queries</title>
+        <link rel="stylesheet" href="css/media-queries.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="StudyHub">
+                    <span class="logo-text-header">StudyHub</span>
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="courses.html" class="active">Courses</a>
+                    </li>
+                    <li>
+                        <a href="schedule.html">Schedule</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="page-header">
+                <h1>My Courses</h1>
+                <p>Explore your current academic subjects.</p>
+            </section>
+            <div class="course">
+                <div class="course-card">
+                    <img src="images/course1.jpeg" alt="Web Technologies" class="card-img">
+                    <div class="card-text">
+                        <span class="card-badge">COURSE</span>
+                        <h2 class="card-title">Web Technologies</h2>
+                        <p class="card-desc">Learn the fundamentals of modern web development from the ground up.</p>
+                        <span class="topics-title">TOPICS</span>
+                        <ul class="topics-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Web Design</li>
+                            <li>Responsive Layout</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-            </article>
-            <article class="tip-card">
-                <img src="images/for_index.jpg" alt="A student working on a laptop">
-                <div class="tip-content">
-                    <p class="eyebrow">02 / FOCUS</p>
-                    <h2>Protect your focus</h2>
-                    <p>Put distractions aside, work on one topic at a time, and take regular breaks.</p>
-                    <a href="courses.html">Explore your courses &rarr;</a>
+                <div class="course-card">
+                    <img src="images/course2.jpeg" alt="Programming" class="card-img">
+                    <div class="card-text">
+                        <span class="card-badge">COURSE</span>
+                        <h2 class="card-title">Programming</h2>
+                        <p class="card-desc">Master core programming concepts and problem-solving techniques.</p>
+                        <span class="topics-title">TOPICS</span>
+                        <ul class="topics-list">
+                            <li>Variables &amp; Types</li>
+                            <li>Control Flow</li>
+                            <li>Functions</li>
+                            <li>OOP</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-            </article>
-            <article class="tip-card">
-                <img src="images/team.jpg" alt="Students working together on a project">
-                <div class="tip-content">
-                    <p class="eyebrow">03 / CONNECT</p>
-                    <h2>Learn together</h2>
-                    <p>Explain a topic to a classmate. Questions and discussion help you notice what needs more practice.</p>
-                    <a href="contact.html">Get in touch &rarr;</a>
+                <div class="course-card">
+                    <img src="images/course3.jpeg" alt="Database Systems" class="card-img">
+                    <div class="card-text">
+                        <span class="card-badge">COURSE</span>
+                        <h2 class="card-title">Database Systems</h2>
+                        <p class="card-desc">Understand database design, SQL, and relational data management.</p>
+                        <span class="topics-title">TOPICS</span>
+                        <ul class="topics-list">
+                            <li>SQL Queries</li>
+                            <li>ER Diagrams</li>
+                            <li>Normalization</li>
+                            <li>CRUD</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p><strong>StudyHub</strong> &copy; 2026. Educational Project.</p>
-        <p>Our team: Amir Kapassov &middot; Yeskendir Abraimov</p>
-    </footer>
-</body>
+            </div>
+            <p class="demo-back">
+                <a href="courses.html">Back to Courses</a>
+            </p>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <!-- Колонки с навигацой-->
+                <!-- Первая колонка логотип и сам текст -->
+                <div class="column">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="StudyHub">
+                        <span class="logo-text-footer">StudyHub</span>
+                    </div>
+                    <p>A student-focused educational website designed to make academic life easier and more organized.</p>
+                </div>
+                <!-- Вторая колонка наша команда-->
+                <div class="column">
+                    <p class="col-title">Our team </p>
+                    <ul>
+                        <li>Amir Kapassov</li>
+                        <li>Yeskendir Abraimov</li>
+                    </ul>
+                </div>
+                <!-- Третья колонка страницы -->
+                <div class="column">
+                    <p class="col-title">Pages</p>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="courses.html">Courses</a>
+                        </li>
+                        <li>
+                            <a href="schedule.html">Schedule</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <!-- Копирайтер-->
+                <small>© 2026 StudyHub. Educational Project. </small>
+            </div>
+        </footer>
+    </body>
 </html>

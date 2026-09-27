@@ -1,175 +1,208 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <title>StudyHub | Schedule</title>
-    <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-    <header class="sticky-top">
-        <a href="#main" class="visually-hidden-focusable position-absolute z-3 bg-white p-3">Skip to content</a>
-        <!-- Task 5: lg = show the full menu from 992px. -->
-        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-                    <img class="brand-logo" src="images/logo.png" alt="">
-                    StudyHub
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>StudyHub | Schedule</title>
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+                <a href="index.html" class="logo gap-3 mb-0">
+                    <img src="images/logo.png" alt="">
+                    <span class="logo-text-header">StudyHub</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
-                        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link " href="courses.html">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-semibold" href="schedule.html" aria-current="page">Schedule</a></li>
-                        <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link " href="media-queries.html">Study Tips</a></li>
+                <div id="mainNav" class="collapse navbar-collapse">
+                    <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link px-0 py-1 rounded-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main" class="flex-grow-1" tabindex="-1">
-        <section class="page-banner text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-5 fw-bold mb-3">Weekly Schedule</h1>
-                <p class="lead mb-0">Stay organized and manage your academic week.</p>
-            </div>
-        </section>
-        <div class="container py-4 py-lg-5">
-            <!-- Task 6: related navigation buttons in one button group. -->
-            <div class="btn-group bg-white mb-4" role="group" aria-label="Schedule sections">
-                <a class="btn btn-outline-primary" href="#weekly">Weekly classes</a>
-                <a class="btn btn-outline-primary" href="#dates">Important dates</a>
-            </div>
-            <section id="weekly" class="mb-4" aria-labelledby="weekly-title">
-                <h2 id="weekly-title" class="h3 mb-3">Your timetable</h2>
-                <!-- Scroll the table, not the entire page, on narrow screens. -->
-                <div class="table-responsive bg-white rounded-3 shadow-sm" role="region" aria-label="Weekly timetable" tabindex="0">
-                    <table class="schedule-table table text-nowrap table-bordered table-hover align-middle mb-0">
-
-                <caption class="px-3">Weekly classes from Monday to Friday.</caption>
-                <thead class="table-dark">
-
-                <tr>
-                    <th scope="col">Time</th>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <th scope="row">09:00 – 10:30</th>
-                    <td><span class="badge text-bg-primary">Web Technologies</span></td>
-                    <td><span class="badge text-bg-success">Programming</span></td>
-                    <td><span class="badge text-bg-danger">Mathematics</span></td>
-                    <td><span class="badge text-bg-secondary">English</span></td>
-                    <td><span class="badge text-bg-warning">Database Systems</span></td>
-                </tr>
-
-                <tr>
-
-                    <th scope="row">11:00 – 12:30</th>
-                    <td><span class="badge text-bg-danger">Mathematics</span></td>
-                    <td><span class="badge text-bg-warning">Database Systems</span></td>
-                    <td><span class="badge text-bg-primary">Web Technologies</span></td>
-                    <td><span class="badge text-bg-success">Programming</span></td>
-                    <td><span class="badge text-bg-secondary">English</span></td>
-
-                </tr>
-
-                <tr>
-
-                    <th scope="row">14:00 – 15:30</th>
-                    <td><span class="badge text-bg-success">Programming</span></td>
-                    <td><span class="badge text-bg-secondary">English</span></td>
-                    <td><span class="badge text-bg-warning">Database Systems</span></td>
-                    <td><span class="badge text-bg-primary">Web Technologies</span></td>
-                    <td><span class="badge text-bg-danger">Mathematics</span></td>
-
-                </tr>
-                </tbody>
-            </table>
+            </nav>
+        </header>
+        <main>
+            <section class="page-header py-5 px-4">
+                <h1 class="m-0 mb-2">Weekly Schedule</h1>
+                <p class="m-0">Stay organized and manage your academic week</p>
+            </section>
+            <section class="schedule-section container my-4 my-lg-5 px-4">
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Weekly timetable">
+                    <table class="schedule-table" aria-label="Weekly schedule">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-3" scope="col">Time</th>
+                                <th class="py-3 px-3" scope="col">Monday</th>
+                                <th class="py-3 px-3" scope="col">Tuesday</th>
+                                <th class="py-3 px-3" scope="col">Wednesday</th>
+                                <th class="py-3 px-3" scope="col">Thursday</th>
+                                <th class="py-3 px-3" scope="col">Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">09:00 – 10:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">11:00 – 12:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">14:00 – 15:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
-            <div class="d-flex flex-wrap gap-2 mb-4" aria-label="Subject legend">
-                <span class="badge text-bg-primary">Web Technologies</span>
-                <span class="badge text-bg-success">Programming</span>
-                <span class="badge text-bg-danger">Mathematics</span>
-                <span class="badge text-bg-secondary">English</span>
-                <span class="badge text-bg-warning">Database Systems</span>
+            <div class="legend gap-3 my-4 mx-auto px-4">
+                <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                <span class="badge badge-prog px-3 py-1">Programming</span>
+                <span class="badge badge-math px-3 py-1">Mathematics</span>
+                <span class="badge badge-eng px-3 py-1">English</span>
+                <span class="badge badge-db px-3 py-1">Database Systems</span>
             </div>
-            <div class="row g-4 mt-lg-4">
-                <section id="dates" class="col-12 col-lg-6" aria-labelledby="dates-title">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <h2 id="dates-title" class="h4 mb-3">Important dates</h2>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item px-0 py-3"><strong class="text-primary">Oct 5 - Oct 10</strong><br>Midterm Exams</li>
-                                <li class="list-group-item px-0 py-3"><strong class="text-primary">Nov 9 - Nov 15</strong><br>Endterm Exams</li>
-                                <li class="list-group-item px-0 py-3"><strong class="text-primary">Nov 16 - Nov 30</strong><br>Final Exams</li>
-                                <li class="list-group-item px-0 py-3"><strong class="text-primary">Dec 1 - Dec 8</strong><br>Winter Break</li>
+            <section class="dates-section container mx-auto mb-5 px-4 py-2">
+                <div class="dates-card p-4">
+                    <h2 class="m-0">
+                        <span class="tips-icon">📅</span> Important Dates</h2>
+                    <ul class="dates-list m-0 p-0">
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Oct 5 – Oct 10</span>
+                            <span class="date-label">Midterm Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Nov 9 – Nov 15</span>
+                            <span class="date-label">Endterm Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Nov 16 – Nov 30</span>
+                            <span class="date-label">Final Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Dec 1 – Dec 8</span>
+                            <span class="date-label">Winter Break</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="pb-4">
+            <div class="footer-content container-fluid pt-5 px-4">
+                <!-- Колонки с навигацой-->
+                <!-- Первая колонка логотип и сам текст -->
+                <!-- Вторая колонка наша команда-->
+                <!-- Третья колонка страницы -->
+                <section class="row g-4" aria-label="About StudyHub">
+                    <div class="column col-12 col-lg-4">
+                        <div>
+                            <div class="logo gap-3 mb-3">
+                                <img src="images/logo.png" alt="StudyHub">
+                                <span class="logo-text-footer">StudyHub</span>
+                            </div>
+                            <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                        <div>
+                            <p class="col-title m-0 mb-3">Our team </p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">Amir Kapassov</li>
+                                <li class="mb-2">Yeskendir Abraimov</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                        <div>
+                            <p class="col-title m-0 mb-3">Pages</p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="courses.html">Courses</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="schedule.html">Schedule</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="contact.html">Contact</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </section>
-                <section class="col-12 col-lg-6" aria-labelledby="week-title">
-                    <div class="card h-100 bg-primary-subtle border-0">
-                        <div class="card-body p-4">
-                            <h2 id="week-title" class="h4 mb-3">Prepare for a good week</h2>
-                            <p>Review your topics, make room for breaks, and set aside time for the subjects that need extra practice.</p>
-                            <p>Our study tips can help you build a routine that fits your timetable.</p>
-                            <a class="btn btn-primary" href="media-queries.html">Read study tips</a>
-                        </div>
-                    </div>
-                </section>
             </div>
-        </div>
-    </main>
-
-    <footer class="site-footer text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-md-5">
-                    <a class="d-flex align-items-center gap-2 text-white text-decoration-none fs-4 fw-bold mb-3" href="index.html">
-                        <img class="brand-logo" src="images/logo.png" alt=""> StudyHub
-                    </a>
-                    <p>A student-focused educational website designed to make academic life easier and more organized.</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="h5 mb-3">Our team</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2">Amir Kapassov</li>
-                        <li>Yeskendir Abraimov</li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <h2 class="h5 mb-3">Pages</h2>
-                    <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a class="link-light" href="index.html">Home</a></li>
-                            <li class="mb-2"><a class="link-light" href="courses.html">Courses</a></li>
-                            <li class="mb-2"><a class="link-light" href="schedule.html">Schedule</a></li>
-                            <li class="mb-2"><a class="link-light" href="gallery.html">Gallery</a></li>
-                            <li class="mb-2"><a class="link-light" href="contact.html">Contact</a></li>
-                            <li class="mb-2"><a class="link-light" href="media-queries.html">Study Tips</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom mt-4 pt-3">
+                <!-- Копирайтер-->
+                <small>© 2026 StudyHub. Educational Project. </small>
             </div>
-            <p class="border-top border-secondary text-center mt-4 pt-3 mb-0"><small>&copy; 2026 StudyHub. Educational Project.</small></p>
-        </div>
-    </footer>
-    <script src="vendor/bootstrap.bundle.min.js"></script>
-</body>
+        </footer>
+        <script src="vendor/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

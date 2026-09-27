@@ -1,155 +1,166 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <title>StudyHub | Contact</title>
-    <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-    <header class="sticky-top">
-        <a href="#main" class="visually-hidden-focusable position-absolute z-3 bg-white p-3">Skip to content</a>
-        <!-- Task 5: lg = show the full menu from 992px. -->
-        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-                    <img class="brand-logo" src="images/logo.png" alt="">
-                    StudyHub
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>StudyHub | Contact</title>
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+                <a href="index.html" class="logo gap-3 mb-0">
+                    <img src="images/logo.png" alt="">
+                    <span class="logo-text-header">StudyHub</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
-                        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link " href="courses.html">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link " href="schedule.html">Schedule</a></li>
-                        <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link active fw-semibold" href="contact.html" aria-current="page">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link " href="media-queries.html">Study Tips</a></li>
+                <div id="mainNav" class="collapse navbar-collapse">
+                    <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link px-0 py-1 rounded-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="nav-link px-0 py-1 rounded-3">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Contact</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main" class="flex-grow-1" tabindex="-1">
-        <section class="page-banner text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-5 fw-bold mb-3">Let’s Talk</h1>
-                <p class="lead mb-0">Have a question about StudyHub? Start here.</p>
-            </div>
-        </section>
-        <section class="container py-4 py-lg-5" aria-label="About us and contact form">
-            <div class="row g-4 g-lg-5">
-                <div class="col-12 col-lg-6">
-                    <h2 class="h3 mb-3">About us</h2>
-                    <p>Hi! We're StudyHub - a team of two, Yeskendir and Amir. We're best friends from Semey, graduated from the same school, and now study at AITU in Astana.</p>
-                    <p>We built this site to make it easier to keep track of your schedule, courses, and upcoming deadlines - the everyday student stuff.</p>
-                    <ul class="list-unstyled bg-primary-subtle rounded-3 p-4 my-4">
-                        <li class="mb-2"><strong>University:</strong> Astana IT University</li>
-                        <li><strong>Team:</strong> Amir Kapassov and Yeskendir Abraimov</li>
-                    </ul>
-                    <img src="images/people.avif" class="contact-image rounded-3" alt="Students discussing in a classroom">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="bg-white border rounded-3 p-3 p-lg-4">
-                        <h2 class="h3 mb-3">Contact form</h2>
-                        <p id="form-note" class="text-body-secondary small">This is a class project demo. The form checks your input but does not send or save messages.</p>
-                        <!-- Task 9: native browser validation + Bootstrap form classes. -->
-                        <form id="contact-form" aria-describedby="form-note">
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" autocomplete="name" required>
+            </nav>
+        </header>
+        <main>
+            <section class="contact-section py-4 py-lg-5 px-4">
+                <div class="contact-container container p-0">
+                    <div class="row g-4 g-lg-5">
+                        <div class="contact-info col-12 col-lg-6">
+                            <h1 class="m-0 mb-3">About Us</h1>
+                            <p class="m-0 mb-2">Hi! We're StudyHub - a team of two, Yeskendir and Amir. We're best friends from Semey, graduated from the same school, and now study at AITU in Astana. </p>
+                            <p class="m-0 mb-2">We built this site to make it easier to keep track of your Schedule, Courses, and upcoming deadlines — the everyday student stuff. </p>
+                            <ul class="info-list m-0 p-0 gap-3 my-4">
+                                <li class="px-3 py-2 gap-2">📧 <strong>Email:</strong> studyhub@astanait.edu</li>
+                                <li class="px-3 py-2 gap-2">🏫 <strong>University:</strong> Astana IT University</li>
+                            </ul>
+                            <img src="images/people.avif" alt="Students discussing in a classroom">
+                        </div>
+                        <div class="contact-form-wrapper col-12 col-lg-6">
+                            <form id="contact-form" class="d-flex flex-column gap-3">
+                                <div class="form-group">
+                                    <label for="name" class="form-label mb-2">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your full name" class="form-control px-3 py-2" required="" autocomplete="name">
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="email" class="form-label">Email</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text" aria-hidden="true">@</span>
-                                        <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
-                                    </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label mb-2">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@university.edu" class="form-control px-3 py-2" required="" autocomplete="email">
                                 </div>
-                                <div class="col-12">
-                                    <label for="topic" class="form-label">Topic</label>
-                                    <select class="form-select" id="topic" name="topic" required>
+                                <div class="form-group">
+                                    <label for="password" class="form-label mb-2">Password</label>
+                                    <input type="password" id="password" name="password" placeholder="Your password" class="form-control px-3 py-2" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <label for="topic" class="form-label mb-2">Topic</label>
+                                    <select id="topic" name="topic" class="form-select px-3 py-2" required="">
                                         <option value="">Select a topic</option>
                                         <option value="courses">Courses</option>
                                         <option value="schedule">Schedule</option>
-                                        <option value="technical">Technical support</option>
+                                        <option value="technical">Technical Support</option>
                                         <option value="other">Other</option>
                                     </select>
                                 </div>
-                                <div class="col-12">
-                                    <fieldset>
-                                        <legend class="fs-6 mb-2">Are you a student at AITU?</legend>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="student" id="student-yes" value="yes" checked>
-                                            <label class="form-check-label" for="student-yes">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="student" id="student-no" value="no">
-                                            <label class="form-check-label" for="student-no">No</label>
-                                        </div>
-                                    </fieldset>
+                                <div class="form-group">
+                                    <label for="message" class="form-label mb-2">Message</label>
+                                    <textarea id="message" name="message" placeholder="Write your message here..." class="form-control px-3 py-2" required=""></textarea>
                                 </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="copy" name="copy">
-                                        <label class="form-check-label" for="copy">Request a copy of my message (demo)</label>
+                                <fieldset>
+                                    <legend class="form-label fs-6 mb-2">Preferred reply</legend>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="reply" id="reply-email" value="email" checked>
+                                        <label class="form-check-label" for="reply-email">Email</label>
                                     </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="reply" id="reply-campus" value="campus">
+                                        <label class="form-check-label" for="reply-campus">On campus</label>
+                                    </div>
+                                </fieldset>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="copy" name="copy">
+                                    <label class="form-check-label" for="copy">Send me a copy</label>
                                 </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100">Submit demo</button>
-                                </div>
-                            </div>
-                            <p id="form-result" class="alert alert-success mt-3 mb-0" role="status" hidden>Your input is valid. This demo has not sent or saved a message.</p>
-                        </form>
+                                <button type="submit" class="btn btn-primary btn-lg w-100 py-3">Send Message</button>
+                                <small class="text-secondary">Demo form: messages and passwords are not sent or saved.</small>
+                                <p id="form-result" class="alert alert-success m-0" role="status" hidden>Your input is valid. This demo has not sent or saved a message.</p>
+                            </form>
+                        </div>
                     </div>
                 </div>
+            </section>
+        </main>
+        <footer class="pb-4">
+            <div class="footer-content container-fluid pt-5 px-4">
+                <!-- Колонки с навигацой-->
+                <!-- Первая колонка логотип и сам текст -->
+                <!-- Вторая колонка наша команда-->
+                <!-- Третья колонка страницы -->
+                <section class="row g-4" aria-label="About StudyHub">
+                    <div class="column col-12 col-lg-4">
+                        <div>
+                            <div class="logo gap-3 mb-3">
+                                <img src="images/logo.png" alt="StudyHub">
+                                <span class="logo-text-footer">StudyHub</span>
+                            </div>
+                            <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                        <div>
+                            <p class="col-title m-0 mb-3">Our team </p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">Amir Kapassov</li>
+                                <li class="mb-2">Yeskendir Abraimov</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                        <div>
+                            <p class="col-title m-0 mb-3">Pages</p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="courses.html">Courses</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="schedule.html">Schedule</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-    </main>
-
-    <footer class="site-footer text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-md-5">
-                    <a class="d-flex align-items-center gap-2 text-white text-decoration-none fs-4 fw-bold mb-3" href="index.html">
-                        <img class="brand-logo" src="images/logo.png" alt=""> StudyHub
-                    </a>
-                    <p>A student-focused educational website designed to make academic life easier and more organized.</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="h5 mb-3">Our team</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2">Amir Kapassov</li>
-                        <li>Yeskendir Abraimov</li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <h2 class="h5 mb-3">Pages</h2>
-                    <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a class="link-light" href="index.html">Home</a></li>
-                            <li class="mb-2"><a class="link-light" href="courses.html">Courses</a></li>
-                            <li class="mb-2"><a class="link-light" href="schedule.html">Schedule</a></li>
-                            <li class="mb-2"><a class="link-light" href="gallery.html">Gallery</a></li>
-                            <li class="mb-2"><a class="link-light" href="contact.html">Contact</a></li>
-                            <li class="mb-2"><a class="link-light" href="media-queries.html">Study Tips</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom mt-4 pt-3">
+                <!-- Копирайтер-->
+                <small>© 2026 StudyHub. Educational Project. </small>
             </div>
-            <p class="border-top border-secondary text-center mt-4 pt-3 mb-0"><small>&copy; 2026 StudyHub. Educational Project.</small></p>
-        </div>
-    </footer>
-    <script src="vendor/bootstrap.bundle.min.js"></script>
-    <script src="js/contact.js"></script>
-</body>
+        </footer>
+        <script src="vendor/bootstrap.bundle.min.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
 </html>

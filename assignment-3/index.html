@@ -1,132 +1,123 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png" type="image/png">
-    <title>StudyHub | Home</title>
-    <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-    <header class="sticky-top">
-        <a href="#main" class="visually-hidden-focusable position-absolute z-3 bg-white p-3">Skip to content</a>
-        <!-- Task 5: lg = show the full menu from 992px. -->
-        <nav class="navbar navbar-expand-lg bg-white border-bottom py-3" aria-label="Main navigation">
-            <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-                    <img class="brand-logo" src="images/logo.png" alt="">
-                    StudyHub
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>StudyHub | Home</title>
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+                <a href="index.html" class="logo gap-3 mb-0">
+                    <img src="images/logo.png" alt="">
+                    <span class="logo-text-header">StudyHub</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
-                        <li class="nav-item"><a class="nav-link active fw-semibold" href="index.html" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a class="nav-link " href="courses.html">Courses</a></li>
-                        <li class="nav-item"><a class="nav-link " href="schedule.html">Schedule</a></li>
-                        <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link " href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link " href="media-queries.html">Study Tips</a></li>
+                <div id="mainNav" class="collapse navbar-collapse">
+                    <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="nav-link px-0 py-1 rounded-3">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                        </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-    </header>
-
-    <main id="main" class="flex-grow-1" tabindex="-1">
-        <!-- Task 3: two equal columns on large screens (6 + 6 = 12). -->
-        <section class="bg-white py-5">
-            <div class="container">
-                <div class="row g-4 align-items-center">
+            </nav>
+        </header>
+        <main>
+            <section class="index container my-4 my-lg-5 px-4 py-2">
+                <div class="row g-4 g-lg-5 align-items-center justify-content-between">
                     <div class="col-12 col-lg-6">
-                        <span class="badge text-primary-emphasis bg-primary-subtle px-3 py-2 mb-4">FOR UNIVERSITY STUDENTS</span>
-                        <h1 class="display-4 fw-bold mb-4">Study smarter with <span class="text-primary">StudyHub.</span></h1>
-                        <p class="lead text-body-secondary mb-4">Everything you need to organize your university life in one place. Track courses, manage your schedule, and find study resources.</p>
-                        <div class="d-grid d-sm-flex gap-3">
-                            <a class="btn btn-primary btn-lg" href="courses.html">Explore Courses</a>
-                            <a class="btn btn-outline-primary btn-lg" href="schedule.html">View Schedule</a>
+                        <div class="container-index">
+                            <!-- Левая сторона -->
+                            <div class="badge px-3 py-2 mb-4">
+                                <span class="start">★</span>FOR UNIVERSITY STUDENTS </div>
+                            <h1 class="main-title m-0">Study smarter with <span class="blue-text">StudyHub.</span>
+                            </h1>
+                            <p class="main-description m-0 mb-4">Everything you need to organize your university life in<br> one place. Track courses, manage your schedule,<br> and find study resources. </p>
+                            <div class="button-group gap-3">
+                                <a class="btn btn-primary py-3 w-100" href="courses.html">Explore Courses</a>
+                                <a class="btn btn-primary py-3 w-100" href="schedule.html">View Schedule</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6 text-center">
-                        <img src="images/for_index.jpg" class="hero-image shadow-sm" alt="A student working on a laptop">
+                    <!-- Правая сторона картинка -->
+                    <div class="container-index-right col-12 col-lg-6">
+                        <img src="images/for_index.jpg" alt="Studying" class="index-img ms-lg-auto">
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Task 3: three columns on desktop (4 + 4 + 4 = 12). -->
-        <section class="container py-5" aria-labelledby="tools-title">
-            <h2 id="tools-title" class="fw-bold mb-2">Your week, a little more organized.</h2>
-            <p class="text-body-secondary mb-4">Start with the tools you need today.</p>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <p class="text-primary fw-bold mb-2">01 / LEARN</p>
-                            <h3 class="h4">Keep your courses close</h3>
-                            <p class="text-body-secondary">Find your current subjects and see the topics you will cover.</p>
-                            <a class="btn btn-outline-primary btn-sm" href="courses.html">Browse courses</a>
+            </section>
+        </main>
+        <footer class="pb-4">
+            <div class="footer-content container-fluid pt-5 px-4">
+                <!-- Колонки с навигацой-->
+                <!-- Первая колонка логотип и сам текст -->
+                <!-- Вторая колонка наша команда-->
+                <!-- Третья колонка страницы -->
+                <section class="row g-4" aria-label="About StudyHub">
+                    <div class="column col-12 col-lg-4">
+                        <div>
+                            <div class="logo gap-3 mb-3">
+                                <img src="images/logo.png" alt="StudyHub">
+                                <span class="logo-text-footer">StudyHub</span>
+                            </div>
+                            <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
                         </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <p class="text-primary fw-bold mb-2">02 / PLAN</p>
-                            <h3 class="h4">Make time for what matters</h3>
-                            <p class="text-body-secondary">Check your timetable and plan around important academic dates.</p>
-                            <a class="btn btn-outline-primary btn-sm" href="schedule.html">Open schedule</a>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                        <div>
+                            <p class="col-title m-0 mb-3">Our team </p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">Amir Kapassov</li>
+                                <li class="mb-2">Yeskendir Abraimov</li>
+                            </ul>
                         </div>
-                    </article>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <article class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4">
-                            <p class="text-primary fw-bold mb-2">03 / GROW</p>
-                            <h3 class="h4">Build better study habits</h3>
-                            <p class="text-body-secondary">A few small changes can help you focus and learn with confidence.</p>
-                            <a class="btn btn-outline-primary btn-sm" href="media-queries.html">Read study tips</a>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                        <div>
+                            <p class="col-title m-0 mb-3">Pages</p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="courses.html">Courses</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="schedule.html">Schedule</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </section>
             </div>
-        </section>
-    </main>
-
-    <footer class="site-footer text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-md-5">
-                    <a class="d-flex align-items-center gap-2 text-white text-decoration-none fs-4 fw-bold mb-3" href="index.html">
-                        <img class="brand-logo" src="images/logo.png" alt=""> StudyHub
-                    </a>
-                    <p>A student-focused educational website designed to make academic life easier and more organized.</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <h2 class="h5 mb-3">Our team</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2">Amir Kapassov</li>
-                        <li>Yeskendir Abraimov</li>
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <h2 class="h5 mb-3">Pages</h2>
-                    <ul class="list-unstyled mb-0">
-                            <li class="mb-2"><a class="link-light" href="index.html">Home</a></li>
-                            <li class="mb-2"><a class="link-light" href="courses.html">Courses</a></li>
-                            <li class="mb-2"><a class="link-light" href="schedule.html">Schedule</a></li>
-                            <li class="mb-2"><a class="link-light" href="gallery.html">Gallery</a></li>
-                            <li class="mb-2"><a class="link-light" href="contact.html">Contact</a></li>
-                            <li class="mb-2"><a class="link-light" href="media-queries.html">Study Tips</a></li>
-                    </ul>
-                </div>
+            <div class="footer-bottom mt-4 pt-3">
+                <!-- Копирайтер-->
+                <small>© 2026 StudyHub. Educational Project. </small>
             </div>
-            <p class="border-top border-secondary text-center mt-4 pt-3 mb-0"><small>&copy; 2026 StudyHub. Educational Project.</small></p>
-        </div>
-    </footer>
-    <script src="vendor/bootstrap.bundle.min.js"></script>
-</body>
+        </footer>
+        <script src="vendor/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

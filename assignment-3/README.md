@@ -1,62 +1,49 @@
 # StudyHub — Assignment 3
 
-Самостоятельная версия сайта для Media Queries + Bootstrap Grid.
-Откройте `index.html` двойным щелчком или через WebStorm → Open in Browser.
-Установка пакетов и запуск сборки не нужны. Bootstrap 5.3.8 лежит в `vendor`, поэтому сайт работает без интернета.
+Версия исходного StudyHub с добавлениями по заданию. Сохранены прежние тексты, пять основных страниц, белый фон, цвета, фотографии, карточки, расписание и оформление футера.
 
-## Где выполнены задания
+Открыть локально: `index.html` двойным щелчком или через WebStorm → Open in Browser. Bootstrap 5.3.8 хранится в `vendor`; установка пакетов и интернет для работы сайта не нужны.
 
-| Задание | Где смотреть |
+Публичный адрес: https://amirkapasov.github.io/StudyHub/assignment-3/
+
+## Требования задания
+
+| Задание | Где выполнено |
 |---|---|
-| 1. Адаптивные размеры текста | `media-queries.html`, `css/media-queries.css` |
-| 2. Три карточки без Bootstrap: 1 / 2 / 3 колонки | `media-queries.html`, `css/media-queries.css` |
-| 3. Bootstrap Grid: две и три колонки | `index.html`; сетка также есть на остальных основных страницах |
-| 4. Отступы Bootstrap, включая адаптивные | `p-3 p-lg-4`, `py-4 py-lg-5`, `mt-lg-4`, `g-4` в HTML |
-| 5. Navbar с раскрывающимся меню | Пять основных страниц, `navbar-expand-lg` |
-| 6. Кнопки разных размеров и группа кнопок | `index.html`, `schedule.html`, `courses.html`, `contact.html` |
-| 7. Карусель с девятью изображениями | `gallery.html` |
-| 8. Карточки с изображениями и card-group | `courses.html` |
-| 9. Адаптивная форма | `contact.html` |
-| 10. Семантика, подписи и доступность | Все страницы |
+| 1. Адаптивный текст | `media-queries.html`, конец `css/media-queries.css` |
+| 2. Три карточки без Bootstrap | `media-queries.html`: три существующие карточки курсов в 1 / 2 / 3 колонки |
+| 3. Bootstrap Grid | Две `col-lg-6` на Home и Contact; три `col-lg-4` в футере; сетка фотографий Gallery |
+| 4. Отступы Bootstrap | `px-4`, `py-3`, `my-4 my-lg-5`, `mt-3 mt-lg-0` и другие классы в HTML |
+| 5. Navbar | Пять прежних ссылок; ниже 992px меню раскрывается кнопкой |
+| 6. Кнопки и btn-group | Home, Courses, Contact; группа Grid / Slideshow в Gallery |
+| 7. Карусель | Gallery → Slideshow: девять фотографий, стрелки и индикаторы |
+| 8. Bootstrap Cards | Пять прежних карточек Courses: `card`, `card-body`, `card-group` |
+| 9. Адаптивная форма | Прежняя форма Contact с `form-control`, `form-select`, radio и checkbox |
+| 10. Доступность | Семантические теги, подписи полей, alt, ARIA-атрибуты, фокус и читаемый текст |
 
-Во всех шести HTML-файлах в footer указаны Amir Kapassov и Yeskendir Abraimov.
-Страница Study Tips специально не подключает Bootstrap: это отдельная демонстрация Tasks 1–2.
-На пяти Bootstrap-страницах собственных CSS-правил для обычных margin/padding нет; отступы задаются классами Bootstrap.
-`scroll-margin-top` задаёт положение при переходе по якорю под закреплённым меню, а не расстояние между блоками.
+На Home две секции с Bootstrap Grid: основной блок в две колонки и существующий футер в три. Дополнительная секция с новым контентом не нужна.
 
-## Как устроены файлы
+Страница Media Queries не подключает Bootstrap. Ссылка на неё находится под карточками Courses. Она использует тот же дизайн и три карточки исходного сайта.
 
-- `index.html`, `courses.html`, `schedule.html`, `gallery.html`, `contact.html` — основные страницы.
-- `media-queries.html` — Study Tips, задания на собственный CSS.
-- `css/style.css` — цвета, размеры изображений, несколько деталей оформления.
-- `css/media-queries.css` — собственные стили и два media queries для Study Tips.
-- `js/contact.js` — короткая демонстрация проверки формы; сообщения не отправляются и не сохраняются.
-- `vendor/` — готовые официальные файлы Bootstrap и лицензия. Их редактировать не нужно.
-- `images/` — изображения из исходного проекта.
+## Файлы
+
+- `css/style.css` — знакомые стили, адаптированные для Bootstrap. Обычные margin/padding перенесены в HTML-классы.
+- `css/media-queries.css` — собственный CSS для заданий 1–2.
+- `js/contact.js` — учебная демонстрация формы; данные, включая пароль, не отправляются и не сохраняются.
+- `vendor/` — официальная библиотека и лицензия; эти файлы редактировать не нужно.
 - `DEFENSE.md` — разбор кода и упражнения для защиты.
 
-## Совместная работа и защита
+Во всех шести HTML-файлах в footer указаны Amir Kapassov и Yeskendir Abraimov.
 
-Рекомендуемое разделение для изучения и проверки каждым участником:
+Рекомендуемое разделение для изучения: Yeskendir — navbar на Contact и Schedule плюс форма; Amir — Grid на Home и Courses плюс карточки и карусель. Каждый участник должен сам понимать и уметь менять свою часть. В отчёте указывается фактический вклад.
 
-- Yeskendir Abraimov: navbar на Contact и Schedule; форма и таблица.
-- Amir Kapassov: Bootstrap Grid на Home и Courses; карточки и карусель.
-- Вместе: media queries, отступы, доступность и проверка на разных ширинах.
+PDF-отчёт отложен по просьбе команды. Для сдачи ещё нужны номер группы, отчёт со скриншотами и личная защита каждого участника.
 
-В отчёте нужно указывать фактический вклад каждого участника. Само наличие имён в footer не заменяет личное участие и понимание кода.
+## Документация
 
-## Что останется для сдачи
-
-PDF-отчёт отложен по просьбе команды. Для финальной сдачи понадобятся номер группы, скриншоты кода и страниц, описание шагов и ссылка на опубликованный сайт. Каждый участник сдаёт работу отдельно.
-
-Для публикации можно разместить содержимое этой папки на GitHub Pages или Netlify. Если GitHub Pages публикует корень основного репозитория, эта версия должна открываться по пути `/assignment-3/` после загрузки файлов в публикуемую ветку. Публичный адрес нужно проверить после развёртывания.
-
-## Источники
-
-- [Bootstrap 5.3: подключение](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
-- [Bootstrap Grid](https://getbootstrap.com/docs/5.3/layout/grid/)
-- [Bootstrap Spacing](https://getbootstrap.com/docs/5.3/utilities/spacing/)
-- [Bootstrap Navbar](https://getbootstrap.com/docs/5.3/components/navbar/)
-- [Bootstrap Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
-- [Bootstrap Cards](https://getbootstrap.com/docs/5.3/components/card/)
-- [MDN: Media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Grid](https://getbootstrap.com/docs/5.3/layout/grid/)
+- [Отступы](https://getbootstrap.com/docs/5.3/utilities/spacing/)
+- [Navbar](https://getbootstrap.com/docs/5.3/components/navbar/)
+- [Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+- [Cards](https://getbootstrap.com/docs/5.3/components/card/)
+- [Tabs](https://getbootstrap.com/docs/5.3/components/navs-tabs/)
