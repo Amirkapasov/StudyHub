@@ -1,184 +1,204 @@
-<!--
-    Student: Yeskendir Abraimov
-    Page: Schedule
-    Assignment: Front-End Assignment #1 (HTML & CSS Basics)
--->
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StudyHub | Schedule</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header >
-
-        <nav class = 'navbar'>
-
-            <a href="index.html" class="logo">
-
-                <img src="images/logo.png" alt="StudyHub">
-                <span class="logo-text-header">StudyHub</span>
-
-            </a>
-
-            <ul class = 'nav-links'>
-
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="schedule.html"  class="active">Schedule</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-    <main>
-
-        <section class="page-header">
-
-            <h1>Weekly Schedule</h1>
-            <p>Stay organized and manage your academic week</p>
-
-        </section>
-
-        <section class = 'schedule-section'>
-
-            <table class="schedule-table">
-
-                <thead>
-
-                <tr>
-                    <th>Time</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                    <td>09:00 – 10:30</td>
-                    <td><span class="badge badge-web">Web Technologies</span></td>
-                    <td><span class="badge badge-prog">Programming</span></td>
-                    <td><span class="badge badge-math">Mathematics</span></td>
-                    <td><span class="badge badge-eng">English</span></td>
-                    <td><span class="badge badge-db">Database Systems</span></td>
-                </tr>
-
-                <tr>
-
-                    <td>11:00 – 12:30</td>
-                    <td><span class="badge badge-math">Mathematics</span></td>
-                    <td><span class="badge badge-db">Database Systems</span></td>
-                    <td><span class="badge badge-web">Web Technologies</span></td>
-                    <td><span class="badge badge-prog">Programming</span></td>
-                    <td><span class="badge badge-eng">English</span></td>
-
-                </tr>
-
-                <tr>
-
-                    <td>14:00 – 15:30</td>
-                    <td><span class="badge badge-prog">Programming</span></td>
-                    <td><span class="badge badge-eng">English</span></td>
-                    <td><span class="badge badge-db">Database Systems</span></td>
-                    <td><span class="badge badge-web">Web Technologies</span></td>
-                    <td><span class="badge badge-math">Mathematics</span></td>
-
-                </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <div class="legend">
-
-            <span class="badge badge-web">Web Technologies</span>
-            <span class="badge badge-prog">Programming</span>
-            <span class="badge badge-math">Mathematics</span>
-            <span class="badge badge-eng">English</span>
-            <span class="badge badge-db">Database Systems</span>
-
-        </div>
-
-        <section class="dates-section">
-            <div class="dates-card">
-                <h2><span class="tips-icon">📅</span> Important Dates</h2>
-                <ul class="dates-list">
-                    <li>
-                        <span class="date-range">Oct 5 – Oct 10</span>
-                        <span class="date-label">Midterm Exams</span>
-                    </li>
-                    <li>
-                        <span class="date-range">Nov 9 – Nov 15</span>
-                        <span class="date-label">Endterm Exams</span>
-                    </li>
-                    <li>
-                        <span class="date-range">Nov 16 – Nov 30</span>
-                        <span class="date-label">Final Exams</span>
-                    </li>
-                    <li>
-                        <span class="date-range">Dec 1 – Dec 8</span>
-                        <span class="date-label">Winter Break</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-    <footer>
-        <div class = 'footer-content'> <!-- Колонки с навигацой-->
-
-            <!-- Первая колонка логотип и сам текст -->
-            <div class = 'column'>
-
-                <div class = 'logo'>
-                    <img src = 'images/logo.png' alt = 'StudyHub'>
-                    <span class = 'logo-text-footer'>StudyHub</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>StudyHub | Schedule</title>
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+                <a href="index.html" class="logo gap-3 mb-0">
+                    <img src="images/logo.png" alt="">
+                    <span class="logo-text-header">StudyHub</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="mainNav" class="collapse navbar-collapse">
+                    <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link px-0 py-1 rounded-3">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="schedule.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <p>A student-focused educational website designed to make academic life easier and more organized.</p>
+            </nav>
+        </header>
+        <main>
+            <section class="page-header py-5 px-4">
+                <h1 class="m-0 mb-2">Weekly Schedule</h1>
+                <p class="m-0">Stay organized and manage your academic week</p>
+            </section>
+            <section class="schedule-section container my-4 my-lg-5 px-4">
+                <div class="table-responsive" tabindex="0" role="region" aria-label="Weekly timetable">
+                    <table class="schedule-table" aria-label="Weekly schedule">
+                        <thead>
+                            <tr>
+                                <th class="py-3 px-3" scope="col">Time</th>
+                                <th class="py-3 px-3" scope="col">Monday</th>
+                                <th class="py-3 px-3" scope="col">Tuesday</th>
+                                <th class="py-3 px-3" scope="col">Wednesday</th>
+                                <th class="py-3 px-3" scope="col">Thursday</th>
+                                <th class="py-3 px-3" scope="col">Friday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">09:00 – 10:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">11:00 – 12:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="py-3 px-3 fw-normal text-nowrap" scope="row">14:00 – 15:30</th>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-prog px-3 py-1">Programming</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-eng px-3 py-1">English</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-db px-3 py-1">Database Systems</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                                </td>
+                                <td class="py-3 px-3">
+                                    <span class="badge badge-math px-3 py-1">Mathematics</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <div class="legend gap-3 my-4 mx-auto px-4">
+                <span class="badge badge-web px-3 py-1">Web Technologies</span>
+                <span class="badge badge-prog px-3 py-1">Programming</span>
+                <span class="badge badge-math px-3 py-1">Mathematics</span>
+                <span class="badge badge-eng px-3 py-1">English</span>
+                <span class="badge badge-db px-3 py-1">Database Systems</span>
             </div>
-
-            <!-- Вторая колонка наша команда-->
-            <div class = 'column'>
-                <p class = 'col-title'>Our team </p>
-                <ul>
-                    <li>Amir Kapassov</li>
-                    <li>Yeskendir Abraimov</li>
-                </ul>
+            <section class="dates-section container mx-auto mb-5 px-4 py-2">
+                <div class="dates-card p-4">
+                    <h2 class="m-0">
+                        <span>📅</span> Important Dates</h2>
+                    <ul class="dates-list m-0 p-0">
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Oct 5 – Oct 10</span>
+                            <span class="date-label">Midterm Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Nov 9 – Nov 15</span>
+                            <span class="date-label">Endterm Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Nov 16 – Nov 30</span>
+                            <span class="date-label">Final Exams</span>
+                        </li>
+                        <li class="py-2 gap-3">
+                            <span class="date-range">Dec 1 – Dec 8</span>
+                            <span class="date-label">Winter Break</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="pb-4">
+            <div class="footer-content container-fluid pt-5 px-4">
+                <!-- Bootstrap Grid: three footer columns on desktop. -->
+                <section class="row g-4" aria-label="About StudyHub">
+                    <div class="column col-12 col-lg-4">
+                        <div>
+                            <div class="logo gap-3 mb-3">
+                                <img src="images/logo.png" alt="StudyHub">
+                                <span class="logo-text-footer">StudyHub</span>
+                            </div>
+                            <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                        <div>
+                            <p class="col-title m-0 mb-3">Our team </p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">Amir Kapassov</li>
+                                <li class="mb-2">Yeskendir Abraimov</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                        <div>
+                            <p class="col-title m-0 mb-3">Pages</p>
+                            <ul class="m-0 p-0">
+                                <li class="mb-2">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="courses.html">Courses</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="schedule.html">Schedule</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <!-- Третья колонка страницы -->
-            <div class = 'column'>
-                <p class = 'col-title'>Pages</p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            <div class="footer-bottom mt-4 pt-3">
+                <!-- Копирайтер-->
+                <small>© 2026 StudyHub. Educational Project. </small>
             </div>
-
-        </div>
-
-        <div class = 'footer-bottom'> <!-- Копирайтер-->
-            <small> &copy; 2026 StudyHub. Educational Project. </small>
-        </div>
-
-
-
-    </footer>
-
-</body>
+        </footer>
+        <script src="vendor/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

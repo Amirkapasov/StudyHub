@@ -1,223 +1,215 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>StudyHub | Courses</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<div class="layout">
-    <header>
-
-        <nav class = 'navbar'>
-
-            <a href="index.html" class="logo">
-
-                <img src="images/logo.png" alt="StudyHub">
-                <span class="logo-text-header">StudyHub</span>
-
-            </a>
-
-            <ul class = 'nav-links'>
-
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html" class="active">Courses</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <aside class="sidebar">
-
-        <p class = 'col-title'>Categories</p>
-        <ul>
-            <li>Web Technologies</li>
-            <li>Programming</li>
-            <li>Database Systems</li>
-            <li>Mathematics</li>
-            <li>English</li>
-        </ul>
-
-        <p class = 'col-title'>Useful links</p>
-        <ul>
-            <li><a href="schedule.html">Weekly schedule</a></li>
-            <li><a href="gallery.html">Campus gallery</a></li>
-            <li><a href="contact.html">Ask a question</a></li>
-        </ul>
-
-    </aside>
-
-    <main>
-
-    <section class="page-header">
-
-        <h1>My Courses</h1>
-        <p>Explore your current academic subjects.</p>
-
-    </section>
-    <div class="courses">
-        <div class="course">
-
-            <!-- Карточка первый -->
-            <div class="course-card">
-                <img src="images/course1.jpeg" alt="Web Technologies" class="card-img">
-                <div class="card-text">
-                    <span class="card-badge">COURSE</span>
-                    <h3 class="card-title">Web Technologies</h3>
-                    <p class="card-desc">Learn the fundamentals of modern web development from the ground up.</p>
-
-                    <span class="topics-title">TOPICS</span>
-                    <ul class="topics-list">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Web Design</li>
-                        <li>Responsive Layout</li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>StudyHub | Courses</title>
+        <link rel="stylesheet" href="vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+                    <a href="index.html" class="logo gap-3 mb-0">
+                        <img src="images/logo.png" alt="">
+                        <span class="logo-text-header">StudyHub</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse">
+                        <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link px-0 py-1 rounded-3">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="courses.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="schedule.html" class="nav-link px-0 py-1 rounded-3">Schedule</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="row g-0 flex-grow-1">
+                <aside class="sidebar col-12 col-lg-auto p-4">
+                    <p class="col-title m-0 mb-3">Categories</p>
+                    <ul class="m-0 p-0 mb-4">
+                        <li class="py-2">Web Technologies</li>
+                        <li class="py-2">Programming</li>
+                        <li class="py-2">Database Systems</li>
+                        <li class="py-2">Mathematics</li>
+                        <li class="py-2">English</li>
                     </ul>
-
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-
-            <div class="course-card">
-                <img src="images/course2.jpeg" alt="Programming" class="card-img">
-                <div class="card-text">
-                    <span class="card-badge">COURSE</span>
-                    <h3 class="card-title">Programming</h3>
-                    <p class="card-desc">Master core programming concepts and problem-solving techniques.</p>
-
-                    <span class="topics-title">TOPICS</span>
-                    <ul class="topics-list">
-                        <li>Variables & Types</li>
-                        <li>Control Flow</li>
-                        <li>Functions</li>
-                        <li>OOP</li>
+                    <p class="col-title m-0 mb-3">Useful links</p>
+                    <ul class="m-0 p-0 mb-4">
+                        <li class="py-2">
+                            <a href="schedule.html">Weekly schedule</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="gallery.html">Campus gallery</a>
+                        </li>
+                        <li class="py-2">
+                            <a href="contact.html">Ask a question</a>
+                        </li>
                     </ul>
-
-                    <a href="#" class="btn">Learn More</a>
-                </div>
+                </aside>
+                <main class="col-12 col-lg">
+                    <section class="page-header py-5 px-4">
+                        <h1 class="m-0 mb-2">My Courses</h1>
+                        <p class="m-0">Explore your current academic subjects.</p>
+                    </section>
+                    <div>
+                        <div class="course card-group gap-4 mx-auto my-4 px-3">
+                            <!-- Карточка первый -->
+                            <div class="course-card card m-0">
+                                <img src="images/course1.jpeg" alt="Web Technologies" class="card-img-top">
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="card-badge px-2 py-1 mb-2">COURSE</span>
+                                    <h2 class="card-title m-0 mb-2">Web Technologies</h2>
+                                    <p class="card-desc m-0 mb-3">Learn the fundamentals of modern web development from the ground up.</p>
+                                    <span class="topics-title mb-2">TOPICS</span>
+                                    <ul class="topics-list m-0 p-0 mb-4">
+                                        <li class="mb-1">HTML</li>
+                                        <li class="mb-1">CSS</li>
+                                        <li class="mb-1">Web Design</li>
+                                        <li class="mb-1">Responsive Layout</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary py-3 mt-auto w-100">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="course-card card m-0">
+                                <img src="images/course2.jpeg" alt="Programming" class="card-img-top">
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="card-badge px-2 py-1 mb-2">COURSE</span>
+                                    <h2 class="card-title m-0 mb-2">Programming</h2>
+                                    <p class="card-desc m-0 mb-3">Master core programming concepts and problem-solving techniques.</p>
+                                    <span class="topics-title mb-2">TOPICS</span>
+                                    <ul class="topics-list m-0 p-0 mb-4">
+                                        <li class="mb-1">Variables &amp; Types</li>
+                                        <li class="mb-1">Control Flow</li>
+                                        <li class="mb-1">Functions</li>
+                                        <li class="mb-1">OOP</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary py-3 mt-auto w-100">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="course-card card m-0">
+                                <img src="images/course3.jpeg" alt="Database Systems" class="card-img-top">
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="card-badge px-2 py-1 mb-2">COURSE</span>
+                                    <h2 class="card-title m-0 mb-2">Database Systems</h2>
+                                    <p class="card-desc m-0 mb-3">Understand database design, SQL, and relational data management.</p>
+                                    <span class="topics-title mb-2">TOPICS</span>
+                                    <ul class="topics-list m-0 p-0 mb-4">
+                                        <li class="mb-1">SQL Queries</li>
+                                        <li class="mb-1">ER Diagrams</li>
+                                        <li class="mb-1">Normalization</li>
+                                        <li class="mb-1">CRUD</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary py-3 mt-auto w-100">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="course-card card m-0">
+                                <img src="images/for_index.jpg" alt="Mathematics" class="card-img-top">
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="card-badge px-2 py-1 mb-2">COURSE</span>
+                                    <h2 class="card-title m-0 mb-2">Mathematics</h2>
+                                    <p class="card-desc m-0 mb-3">Build a strong base in calculus, algebra and discrete math.</p>
+                                    <span class="topics-title mb-2">TOPICS</span>
+                                    <ul class="topics-list m-0 p-0 mb-4">
+                                        <li class="mb-1">Limits &amp; Derivatives</li>
+                                        <li class="mb-1">Matrices</li>
+                                        <li class="mb-1">Probability</li>
+                                        <li class="mb-1">Discrete Math</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary py-3 mt-auto w-100">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="course-card card m-0">
+                                <img src="images/people.avif" alt="English" class="card-img-top">
+                                <div class="card-body p-4 d-flex flex-column">
+                                    <span class="card-badge px-2 py-1 mb-2">COURSE</span>
+                                    <h2 class="card-title m-0 mb-2">English</h2>
+                                    <p class="card-desc m-0 mb-3">Improve academic English for study, writing and presentations.</p>
+                                    <span class="topics-title mb-2">TOPICS</span>
+                                    <ul class="topics-list m-0 p-0 mb-4">
+                                        <li class="mb-1">Academic Writing</li>
+                                        <li class="mb-1">Speaking</li>
+                                        <li class="mb-1">Vocabulary</li>
+                                        <li class="mb-1">Presentations</li>
+                                    </ul>
+                                    <a href="contact.html" class="btn btn-primary py-3 mt-auto w-100">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mb-4">
+                            <a href="media-queries.html">Media Queries demo</a>
+                        </p>
+                    </div>
+                </main>
             </div>
-
-
-            <div class="course-card">
-                <img src="images/course3.jpeg" alt="Database Systems" class="card-img">
-                <div class="card-text">
-                    <span class="card-badge">COURSE</span>
-                    <h3 class="card-title">Database Systems</h3>
-                    <p class="card-desc">Understand database design, SQL, and relational data management.</p>
-
-                    <span class="topics-title">TOPICS</span>
-                    <ul class="topics-list">
-                        <li>SQL Queries</li>
-                        <li>ER Diagrams</li>
-                        <li>Normalization</li>
-                        <li>CRUD</li>
-                    </ul>
-
-                    <a href="#" class="btn">Learn More</a>
+            <footer class="pb-4">
+                <div class="footer-content container-fluid pt-5 px-4">
+                    <!-- Bootstrap Grid: three footer columns on desktop. -->
+                    <section class="row g-4" aria-label="About StudyHub">
+                        <div class="column col-12 col-lg-4">
+                            <div>
+                                <div class="logo gap-3 mb-3">
+                                    <img src="images/logo.png" alt="StudyHub">
+                                    <span class="logo-text-footer">StudyHub</span>
+                                </div>
+                                <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
+                            </div>
+                        </div>
+                        <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                            <div>
+                                <p class="col-title m-0 mb-3">Our team </p>
+                                <ul class="m-0 p-0">
+                                    <li class="mb-2">Amir Kapassov</li>
+                                    <li class="mb-2">Yeskendir Abraimov</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                            <div>
+                                <p class="col-title m-0 mb-3">Pages</p>
+                                <ul class="m-0 p-0">
+                                    <li class="mb-2">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="courses.html">Courses</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="schedule.html">Schedule</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="gallery.html">Gallery</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </div>
-
-
-            <div class="course-card">
-                <img src="images/for_index.jpg" alt="Mathematics" class="card-img">
-                <div class="card-text">
-                    <span class="card-badge">COURSE</span>
-                    <h3 class="card-title">Mathematics</h3>
-                    <p class="card-desc">Build a strong base in calculus, algebra and discrete math.</p>
-
-                    <span class="topics-title">TOPICS</span>
-                    <ul class="topics-list">
-                        <li>Limits & Derivatives</li>
-                        <li>Matrices</li>
-                        <li>Probability</li>
-                        <li>Discrete Math</li>
-                    </ul>
-
-                    <a href="#" class="btn">Learn More</a>
+                <div class="footer-bottom mt-4 pt-3">
+                    <!-- Копирайтер-->
+                    <small>© 2026 StudyHub. Educational Project. </small>
                 </div>
-            </div>
-
-
-            <div class="course-card">
-                <img src="images/people.avif" alt="English" class="card-img">
-                <div class="card-text">
-                    <span class="card-badge">COURSE</span>
-                    <h3 class="card-title">English</h3>
-                    <p class="card-desc">Improve academic English for study, writing and presentations.</p>
-
-                    <span class="topics-title">TOPICS</span>
-                    <ul class="topics-list">
-                        <li>Academic Writing</li>
-                        <li>Speaking</li>
-                        <li>Vocabulary</li>
-                        <li>Presentations</li>
-                    </ul>
-
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-
-
-
+            </footer>
         </div>
-    </div>
-
-    </main>
-
-    <footer>
-        <div class = 'footer-content'> <!-- Колонки с навигацой-->
-
-            <!-- Первая колонка логотип и сам текст -->
-            <div class = 'column'>
-
-                <div class = 'logo'>
-                    <img src = 'images/logo.png' alt = 'StudyHub'>
-                    <span class = 'logo-text-footer'>StudyHub</span>
-                </div>
-
-                <p>A student-focused educational website designed to make academic life easier and more organized.</p>
-            </div>
-
-            <!-- Вторая колонка наша команда-->
-            <div class = 'column'>
-                <p class = 'col-title'>Our team </p>
-                <ul>
-                    <li>Amir Kapassov</li>
-                    <li>Yeskendir Abraimov</li>
-                </ul>
-            </div>
-
-
-            <!-- Третья колонка страницы -->
-            <div class = 'column'>
-                <p class = 'col-title'>Pages</p>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class = 'footer-bottom'> <!-- Копирайтер-->
-            <small> &copy; 2026 StudyHub. Educational Project. </small>
-        </div>
-
-
-
-    </footer>
-</div>
-
-</body>
+        <script src="vendor/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
