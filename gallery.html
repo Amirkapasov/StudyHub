@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- StudyHub. Авторы: Amir Kapassov, Yeskendir Abraimov -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>StudyHub | Gallery</title>
@@ -46,7 +47,7 @@
             </section>
             <!-- Сетка с картинками, подпись появляется при наведении -->
             <div class="gallery-toolbar container mx-auto px-4 mt-4">
-                <!-- Task 6: a button group switches between the original grid and the carousel. -->
+                <!-- Кнопки переключают сетку и слайдер -->
                 <div class="btn-group" role="tablist" aria-label="Gallery view">
                     <button class="btn btn-outline-primary btn-sm active" id="grid-tab" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#photo-grid" aria-controls="photo-grid" aria-selected="true">Grid</button>
                     <button class="btn btn-outline-primary btn-sm" id="slideshow-tab" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#photo-slideshow" aria-controls="photo-slideshow" aria-selected="false">Slideshow</button>
@@ -117,7 +118,7 @@
                     <div class="gallery container mx-auto my-4 px-4">
                         <div class="row">
                             <div class="col-12">
-                                <!-- Task 7: nine images, controls and indicators. -->
+                                <!-- Слайдер на 9 фото со стрелками и точками -->
                                 <div id="campusCarousel" class="carousel slide rounded-3 overflow-hidden" data-bs-interval="false" aria-label="Campus photos">
                                     <div class="carousel-indicators bg-dark rounded-3 py-1">
                                         <button type="button" data-bs-target="#campusCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
@@ -176,7 +177,7 @@
         </main>
         <footer class="pb-4">
             <div class="footer-content container-fluid pt-5 px-4">
-                <!-- Bootstrap Grid: three footer columns on desktop. -->
+                <!-- Три колонки футера (сетка Bootstrap) -->
                 <section class="row g-4" aria-label="About StudyHub">
                     <div class="column col-12 col-lg-4">
                         <div>
