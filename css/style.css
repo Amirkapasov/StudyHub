@@ -166,34 +166,36 @@ main .contact-info img {
     border-bottom: none;
 }
 
-.badge {
+.tag {
+    display: inline-block;
+    white-space: nowrap;
     line-height: 1.6;
     border-radius: 999px;
     font-size: 13px;
     font-weight: 600;
 }
 
-.badge-web {
+.tag-web {
     background: #DBEAFE;
     color: #1D4ED8;
 }
 
-.badge-db {
+.tag-db {
     background: #FEF3C7;
     color: #92400E;
 }
 
-.badge-prog {
+.tag-prog {
     background: #D1FAE5;
     color: #047857;
 }
 
-.badge-math {
+.tag-math {
     background: #FCE7F3;
     color: #BE185D;
 }
 
-.badge-eng {
+.tag-eng {
     background: #EDE9FE;
     color: #6D28D9;
 }
@@ -301,7 +303,7 @@ footer {
     max-width: 520px;
 }
 
-.container-index .badge {
+.container-index .tag {
     background-color: #e6eeff;
     color: #1d4ed8;
     font-weight: 700;
