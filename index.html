@@ -1,120 +1,190 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- StudyHub. Авторы: Amir Kapassov, Yeskendir Abraimov -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>StudyHub | Home</title>
-        <link rel="stylesheet" href="vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" href="images/logo.png" type="image/png">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
-                <a href="index.html" class="logo gap-3 mb-0">
-                    <img src="images/logo.png" alt="" width="32" height="32">
-                    <span class="logo-text-header">StudyHub</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="mainNav" class="collapse navbar-collapse">
-                    <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
-                        <li class="nav-item">
-                            <a href="index.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Home</a>
+<head>
+    <!-- StudyHub. Авторы: Amir Kapassov, Yeskendir Abraimov -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StudyHub | Home</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-white mx-auto px-4 py-3" aria-label="Main navigation">
+        <a href="index.html" class="logo gap-3 mb-0">
+            <img src="images/logo.png" alt="" width="32" height="32">
+            <span class="logo-text-header">StudyHub</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="mainNav" class="collapse navbar-collapse">
+            <ul class="nav-links m-0 p-0 navbar-nav ms-auto gap-2 gap-lg-4 mt-3 mt-lg-0">
+                <li class="nav-item">
+                    <a href="index.html" class="active nav-link px-3 py-1 rounded-3" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="schedule.html" class="nav-link px-0 py-1 rounded-3">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="index container my-4 my-lg-5 px-4 py-2">
+        <div class="row g-4 g-lg-5 align-items-center justify-content-between">
+            <div class="col-12 col-lg-6">
+                <div class="container-index">
+                    <!-- Левая сторона -->
+                    <div class="tag px-3 py-2 mb-4">
+                        <span>★</span>FOR UNIVERSITY STUDENTS
+                    </div>
+                    <h1 class="main-title m-0">Study smarter with <span class="blue-text">StudyHub.</span>
+                    </h1>
+                    <p class="main-description m-0 mb-4">Everything you need to organize your university life in<br> one
+                        place. Track courses, manage your schedule,<br> and find study resources. </p>
+                    <div class="button-group gap-3">
+                        <a class="btn btn-primary py-3 w-100" href="courses.html">Explore Courses</a>
+                        <a class="btn btn-primary py-3 w-100" href="schedule.html">View Schedule</a>
+                    </div>
+                    <button type="button" id="open-signup" class="btn btn-outline-primary py-3 w-100 mt-3">Sign up for
+                        free
+                    </button>
+                </div>
+            </div>
+            <!-- Правая сторона картинка -->
+            <div class="container-index-right col-12 col-lg-6">
+                <img src="images/for_index.jpg" alt="Studying" class="index-img img-fluid ms-lg-auto">
+            </div>
+        </div>
+    </section>
+    <section class="widgets container mb-5 px-4" aria-label="Today and page theme">
+        <div class="row g-4">
+            <!-- Task 5. Дата и время (js/datetime.js) -->
+            <div class="col-12 col-md-6">
+                <div class="widget-card p-4">
+                    <p class="widget-label m-0 mb-2">TODAY</p>
+                    <p id="current-date" class="widget-date m-0">Loading date...</p>
+                    <p id="current-time" class="widget-time m-0"></p>
+                </div>
+            </div>
+            <!-- Task 4. Смена фона (js/background.js) -->
+            <div class="col-12 col-md-6">
+                <div class="widget-card p-4">
+                    <p class="widget-label m-0 mb-2">PAGE BACKGROUND</p>
+                    <p class="widget-text m-0 mb-3">Current color: <strong id="bg-name">White</strong></p>
+                    <button type="button" id="bg-button" class="btn btn-primary px-4 py-2">Change background</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- Task 3. Popup (js/popup.js) -->
+<div id="signup-popup" class="popup-overlay">
+    <div class="popup p-4" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+        <button type="button" class="popup-close" aria-label="Close">&times;</button>
+        <h2 id="signup-title" class="m-0 mb-1">Join StudyHub</h2>
+        <p class="popup-text m-0 mb-3">Create a free account to save your courses and schedule.</p>
+        <!-- Task 1. Проверяет js/validation.js -->
+        <form id="signup-form" class="validate-form d-flex flex-column gap-3" novalidate>
+            <div>
+                <label for="signup-name" class="form-label mb-2">Name</label>
+                <input type="text" id="signup-name" name="name" placeholder="Your full name"
+                       class="form-control px-3 py-2" required="" autocomplete="name">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div>
+                <label for="signup-email" class="form-label mb-2">Email</label>
+                <input type="email" id="signup-email" name="email" placeholder="your.email@university.edu"
+                       class="form-control px-3 py-2" required="" autocomplete="email">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div>
+                <label for="signup-password" class="form-label mb-2">Password</label>
+                <input type="password" id="signup-password" name="password" placeholder="At least 8 characters"
+                       class="form-control px-3 py-2" required="" autocomplete="new-password">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div>
+                <label for="signup-confirm" class="form-label mb-2">Confirm password</label>
+                <input type="password" id="signup-confirm" name="confirm" placeholder="Repeat your password"
+                       class="form-control px-3 py-2" required="" autocomplete="new-password">
+                <div class="invalid-feedback"></div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-3">Create account</button>
+            <div class="form-success alert alert-success m-0" role="status" hidden>Welcome to StudyHub! Your account has
+                been created.
+            </div>
+        </form>
+    </div>
+</div>
+<footer class="pb-4">
+    <div class="footer-content container-fluid pt-5 px-4">
+        <!-- Три колонки футера (сетка Bootstrap) -->
+        <section class="row g-4" aria-label="About StudyHub">
+            <div class="column col-12 col-lg-4">
+                <div>
+                    <div class="logo gap-3 mb-3">
+                        <img src="images/logo.png" alt="StudyHub" width="32" height="32">
+                        <span class="logo-text-footer">StudyHub</span>
+                    </div>
+                    <p class="m-0">A student-focused educational website designed to make academic life easier and more
+                        organized.</p>
+                </div>
+            </div>
+            <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
+                <div>
+                    <p class="col-title m-0 mb-3">Our team </p>
+                    <ul class="m-0 p-0">
+                        <li class="mb-2">Amir Kapassov</li>
+                        <li class="mb-2">Yeskendir Abraimov</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
+                <div>
+                    <p class="col-title m-0 mb-3">Pages</p>
+                    <ul class="m-0 p-0">
+                        <li class="mb-2">
+                            <a href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="courses.html" class="nav-link px-0 py-1 rounded-3">Courses</a>
+                        <li class="mb-2">
+                            <a href="courses.html">Courses</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="schedule.html" class="nav-link px-0 py-1 rounded-3">Schedule</a>
+                        <li class="mb-2">
+                            <a href="schedule.html">Schedule</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="gallery.html" class="nav-link px-0 py-1 rounded-3">Gallery</a>
+                        <li class="mb-2">
+                            <a href="gallery.html">Gallery</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link px-0 py-1 rounded-3">Contact</a>
+                        <li class="mb-2">
+                            <a href="contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <section class="index container my-4 my-lg-5 px-4 py-2">
-                <div class="row g-4 g-lg-5 align-items-center justify-content-between">
-                    <div class="col-12 col-lg-6">
-                        <div class="container-index">
-                            <!-- Левая сторона -->
-                            <div class="tag px-3 py-2 mb-4">
-                                <span>★</span>FOR UNIVERSITY STUDENTS </div>
-                            <h1 class="main-title m-0">Study smarter with <span class="blue-text">StudyHub.</span>
-                            </h1>
-                            <p class="main-description m-0 mb-4">Everything you need to organize your university life in<br> one place. Track courses, manage your schedule,<br> and find study resources. </p>
-                            <div class="button-group gap-3">
-                                <a class="btn btn-primary py-3 w-100" href="courses.html">Explore Courses</a>
-                                <a class="btn btn-primary py-3 w-100" href="schedule.html">View Schedule</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Правая сторона картинка -->
-                    <div class="container-index-right col-12 col-lg-6">
-                        <img src="images/for_index.jpg" alt="Studying" class="index-img img-fluid ms-lg-auto">
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="pb-4">
-            <div class="footer-content container-fluid pt-5 px-4">
-                <!-- Три колонки футера (сетка Bootstrap) -->
-                <section class="row g-4" aria-label="About StudyHub">
-                    <div class="column col-12 col-lg-4">
-                        <div>
-                            <div class="logo gap-3 mb-3">
-                                <img src="images/logo.png" alt="StudyHub" width="32" height="32">
-                                <span class="logo-text-footer">StudyHub</span>
-                            </div>
-                            <p class="m-0">A student-focused educational website designed to make academic life easier and more organized.</p>
-                        </div>
-                    </div>
-                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end pe-lg-4">
-                        <div>
-                            <p class="col-title m-0 mb-3">Our team </p>
-                            <ul class="m-0 p-0">
-                                <li class="mb-2">Amir Kapassov</li>
-                                <li class="mb-2">Yeskendir Abraimov</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column col-12 col-sm-6 col-lg-4 d-lg-flex justify-content-lg-end">
-                        <div>
-                            <p class="col-title m-0 mb-3">Pages</p>
-                            <ul class="m-0 p-0">
-                                <li class="mb-2">
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="courses.html">Courses</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="schedule.html">Schedule</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="gallery.html">Gallery</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
             </div>
-            <div class="footer-bottom mt-4 pt-3">
-                <!-- Копирайтер-->
-                <small>© 2026 StudyHub. Educational Project. </small>
-            </div>
-        </footer>
-        <script src="vendor/bootstrap.bundle.min.js"></script>
-    </body>
+        </section>
+    </div>
+    <div class="footer-bottom mt-4 pt-3">
+        <!-- Копирайтер-->
+        <small>© 2026 StudyHub. Educational Project. </small>
+    </div>
+</footer>
+<script src="vendor/bootstrap.bundle.min.js"></script>
+<script src="js/validation.js" defer></script>
+<script src="js/popup.js" defer></script>
+<script src="js/background.js" defer></script>
+<script src="js/datetime.js" defer></script>
+</body>
 </html>

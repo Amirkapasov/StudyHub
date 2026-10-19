@@ -23,6 +23,15 @@ StudyHub is a website for university students. It helps to keep courses, weekly 
 - HTML5
 - CSS3 (Flexbox, Grid, media queries)
 - Bootstrap 5.3 (grid, navbar, cards, carousel, buttons, forms)
+- JavaScript (form validation, FAQ accordion, sign-up popup, background color, date and time)
+
+## JavaScript (Assignment 4)
+
+- `js/validation.js` - checks the Contact form and the Sign up form (required fields, email, password length, password confirmation)
+- `js/accordion.js` - FAQ on the Contact page, answers open and close with a smooth transition
+- `js/popup.js` - Sign up popup on the Home page, closes with ×, click outside or Esc
+- `js/background.js` - button on the Home page that changes the page background color
+- `js/datetime.js` - current date and time on the Home page, updated every second
 
 ## How to run
 
