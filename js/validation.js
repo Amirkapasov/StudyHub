@@ -61,9 +61,50 @@ forms.forEach(function (form) {
             }
         });
 
-        success.hidden = !isValid;
-        if (isValid) {
-            form.reset();
+        if (!isValid) {
+            success.hidden = true;
+            return;
         }
+
+        // contact форму отправляем на сервер (send-form.js)
+        if (form.id === "contact-form") {
+            submitContactForm(form, success);
+            return;
+        }
+
+        success.hidden = false;
+        form.reset();
     });
 });
+
+function submitContactForm(form, message) {
+    const submitButton = form.querySelector("button[type='submit']");
+    const name = form.elements["name"].value.trim();
+
+    submitButton.disabled = true; // чтобы не отправили два раза
+    submitButton.textContent = "Sending...";
+    message.hidden = true;
+    playSound("click"); // звук на клике, иначе браузер может заглушить звук после ответа
+
+    // callback для sendForm
+    function showResult(isSent, result) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+
+        if (isSent) {
+            message.classList.remove("alert-danger");
+            message.classList.add("alert-success");
+            message.textContent = "Thank you, " + name + "! Your message #" + result.id + " has been sent.";
+            form.reset();
+            playSound("success");
+        } else {
+            message.classList.remove("alert-success");
+            message.classList.add("alert-danger");
+            message.textContent = "Sorry, the message was not sent. Check your internet and try again.";
+            playSound("error");
+        }
+        message.hidden = false;
+    }
+
+    sendForm(form, showResult);
+}

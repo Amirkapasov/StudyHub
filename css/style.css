@@ -731,6 +731,82 @@ body {
     color: #64748b;
 }
 
+/* Звёзды рейтинга (js/rating.js) */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    padding: 0 2px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    line-height: 1;
+    color: #CBD5E1;
+    /* transform меняет JS */
+    transition: color 0.2s, transform 0.15s ease;
+}
+
+.star:hover {
+    color: #FCD34D;
+}
+
+.star.selected {
+    color: #F59E0B;
+}
+
+.rating-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* Фильтр курсов (js/filter.js) */
+.filter-btn {
+    padding: 8px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: white;
+    text-align: left;
+    font-size: 14px;
+    color: #475569;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+    color: #2563EB;
+}
+
+.filter-btn.active {
+    border-color: #2563EB;
+    background-color: #2563EB;
+    color: white;
+}
+
+.courses-status {
+    max-width: 1200px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* появление карточки при смене фильтра */
+.card-appear {
+    animation: card-appear 0.4s ease;
+}
+
+@keyframes card-appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 991px) {
     .sidebar {
         width: 100%;

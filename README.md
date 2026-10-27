@@ -33,6 +33,14 @@ StudyHub is a website for university students. It helps to keep courses, weekly 
 - `js/background.js` - button on the Home page that changes the page background color
 - `js/datetime.js` - current date and time on the Home page, updated every second
 
+## JavaScript (Assignment 5)
+
+- `js/keyboard-nav.js` - all pages: move between menu links with arrow keys (`keydown` + `switch`)
+- `js/rating.js` - Courses page: click the stars to rate a course; ratings are kept in an object with methods and the average is shown on the page
+- `js/filter.js` - Courses page: filter courses by category or "Top rated" (`switch`, array of objects, `filter`, `for` loop, card animation)
+- `js/send-form.js` - Contact page: the form is sent with `fetch` (POST) without page reload, the result is shown by a callback
+- `js/sound.js` - short sounds made with the Web Audio API (no audio files), a new sound stops the previous one
+
 ## How to run
 
 Download or clone the repository and open `index.html` in a browser.
