@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="images/logo.png" type="image/png">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <div class="layout">
@@ -43,6 +45,12 @@
             </header>
             <div class="row g-0 flex-grow-1">
                 <aside class="sidebar col-12 col-lg-auto order-2 order-lg-1 p-4">
+                    <!-- поиск по курсам (course-search.js, autocomplete.js) -->
+                    <p class="col-title m-0 mb-3">Search courses</p>
+                    <div class="search-box position-relative mb-4">
+                        <input type="search" id="course-search" class="search-input w-100" placeholder="Search by name..." autocomplete="off" aria-label="Search courses">
+                        <ul id="search-suggestions" class="search-suggestions m-0 p-0"></ul>
+                    </div>
                     <!-- Фильтр курсов (js/filter.js) -->
                     <p class="col-title m-0 mb-3">Filter courses</p>
                     <div class="filter-buttons d-flex flex-column gap-2 mb-4" role="group" aria-label="Filter courses">
@@ -50,6 +58,7 @@
                         <button type="button" class="filter-btn" data-filter="it">IT courses</button>
                         <button type="button" class="filter-btn" data-filter="general">General education</button>
                         <button type="button" class="filter-btn" data-filter="top">Top rated (4★+)</button>
+<!--                        <button type="button" class="filter-btn" data-filter="unrated">Not Rated</button>-->
                     </div>
                     <p class="col-title m-0 mb-3">Useful links</p>
                     <ul class="m-0 p-0 mb-4">
@@ -224,8 +233,11 @@
         </div>
         <script src="vendor/bootstrap.bundle.min.js"></script>
         <script src="js/keyboard-nav.js" defer></script>
+        <script src="js/progress-bar.js" defer></script>
         <script src="js/sound.js" defer></script>
         <script src="js/rating.js" defer></script>
         <script src="js/filter.js" defer></script>
+        <script src="js/course-search.js" defer></script>
+        <script src="js/autocomplete.js" defer></script>
     </body>
 </html>

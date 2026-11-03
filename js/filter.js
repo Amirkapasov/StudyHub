@@ -16,7 +16,15 @@ const courses = Array.from(courseCards).map(function (card) {
 
 let currentFilter = "all";
 
+// карточки, найденные поиском (course-search.js)
+let searchMatches = $(".course-card");
+
 function isCourseVisible(course, filter) {
+    // не прошла поиск - скрываем
+    if (!searchMatches.is(course.element)) {
+        return false;
+    }
+
     switch (filter) {
         case "it":
             return course.category === "it";
@@ -24,6 +32,8 @@ function isCourseVisible(course, filter) {
             return course.category === "general";
         case "top":
             return courseRatings.get(course.title) >= 4;
+        // case "unrated":
+        //     return courseRatings.get(course.title) === 0;
         default: // all
             return true;
     }

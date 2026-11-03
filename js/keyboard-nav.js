@@ -20,7 +20,9 @@ navLinks.forEach(function (link, index) {
                 return; // Tab, Enter и остальные не трогаем
         }
 
+
         event.preventDefault(); // иначе стрелка скроллит страницу
         navLinks[nextIndex].focus();
     });
 });
+

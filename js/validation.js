@@ -81,15 +81,17 @@ function submitContactForm(form, message) {
     const submitButton = form.querySelector("button[type='submit']");
     const name = form.elements["name"].value.trim();
 
-    submitButton.disabled = true; // чтобы не отправили два раза
-    submitButton.textContent = "Sending...";
+    // блокируем кнопку и показываем спиннер
+    $(submitButton).prop("disabled", true);
+    $(submitButton).html('<span class="spinner-border spinner-border-sm me-2"></span>Please wait...');
     message.hidden = true;
     playSound("click"); // звук на клике, иначе браузер может заглушить звук после ответа
 
     // callback для sendForm
     function showResult(isSent, result) {
-        submitButton.disabled = false;
-        submitButton.textContent = "Send Message";
+        // возвращаем кнопку
+        $(submitButton).prop("disabled", false);
+        $(submitButton).text("Send Message");
 
         if (isSent) {
             message.classList.remove("alert-danger");
@@ -97,6 +99,7 @@ function submitContactForm(form, message) {
             message.textContent = "Thank you, " + name + "! Your message #" + result.id + " has been sent.";
             form.reset();
             playSound("success");
+            showToast("Form submitted successfully!");
         } else {
             message.classList.remove("alert-success");
             message.classList.add("alert-danger");
@@ -106,5 +109,8 @@ function submitContactForm(form, message) {
         message.hidden = false;
     }
 
-    sendForm(form, showResult);
+    // задержка, чтобы было видно спиннер
+    setTimeout(function () {
+        sendForm(form, showResult);
+    }, 1500);
 }

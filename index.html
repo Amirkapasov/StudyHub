@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <header>
@@ -85,6 +87,35 @@
                     <p class="widget-label m-0 mb-2">PAGE BACKGROUND</p>
                     <p class="widget-text m-0 mb-3">Current color: <strong id="bg-name">White</strong></p>
                     <button type="button" id="bg-button" class="btn btn-primary px-4 py-2">Change background</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- статистика (counter.js) -->
+    <section class="stats container mb-5 px-4" aria-label="StudyHub in numbers">
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="stat-card p-4">
+                    <p class="stat-value m-0"><span class="counter-number" data-target="5">0</span></p>
+                    <p class="stat-label m-0">Courses</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card p-4">
+                    <p class="stat-value m-0"><span class="counter-number" data-target="1200">0</span><span>+</span></p>
+                    <p class="stat-label m-0">Students</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card p-4">
+                    <p class="stat-value m-0"><span class="counter-number" data-target="40">0</span></p>
+                    <p class="stat-label m-0">Lessons per week</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stat-card p-4">
+                    <p class="stat-value m-0"><span class="counter-number" data-target="98">0</span><span>%</span></p>
+                    <p class="stat-label m-0">Satisfaction</p>
                 </div>
             </div>
         </div>
@@ -187,5 +218,7 @@
 <script src="js/background.js" defer></script>
 <script src="js/datetime.js" defer></script>
 <script src="js/keyboard-nav.js" defer></script>
+<script src="js/progress-bar.js" defer></script>
+<script src="js/counter.js" defer></script>
 </body>
 </html>

@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="images/logo.png" type="image/png">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
@@ -49,7 +51,10 @@
                             <p class="m-0 mb-2">Hi! We're StudyHub - a team of two, Yeskendir and Amir. We're best friends from Semey, graduated from the same school, and now study at AITU in Astana. </p>
                             <p class="m-0 mb-2">We built this site to make it easier to keep track of your Schedule, Courses, and upcoming deadlines — the everyday student stuff. </p>
                             <ul class="info-list m-0 p-0 gap-3 my-4">
-                                <li class="px-3 py-2 gap-2">📧 <strong>Email:</strong> studyhub@astanait.edu</li>
+                                <li class="px-3 py-2 gap-2">📧 <strong>Email:</strong> <span class="copy-text">studyhub@astanait.edu</span>
+                                    <!-- кнопка копирования (copy.js) -->
+                                    <button type="button" class="copy-btn ms-auto" data-copy="studyhub@astanait.edu" aria-label="Copy email">📋</button>
+                                </li>
                                 <li class="px-3 py-2 gap-2">🏫 <strong>University:</strong> Astana IT University</li>
                             </ul>
                             <img src="images/people.avif" alt="Students discussing in a classroom" class="img-fluid">
@@ -108,37 +113,42 @@
             <!-- Task 2. FAQ (js/accordion.js) -->
             <section class="faq-section container mb-5 px-4" aria-labelledby="faq-title">
                 <h2 id="faq-title" class="m-0 mb-4">Frequently Asked Questions</h2>
+                <!-- поиск по FAQ (faq-highlight.js) -->
+                <div class="faq-search mb-3">
+                    <input type="search" id="faq-search" class="search-input w-100" placeholder="Search in questions and answers..." autocomplete="off" aria-label="Search FAQ">
+                    <p id="faq-search-count" class="faq-search-count m-0 mt-2" aria-live="polite"></p>
+                </div>
                 <div class="faq-list d-flex flex-column gap-3">
                     <div class="faq-item">
-                        <button type="button" class="faq-question">What is StudyHub? <span class="faq-icon" aria-hidden="true">+</span>
+                        <button type="button" class="faq-question"><span class="faq-question-text">What is StudyHub?</span> <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer">
                             <p>StudyHub is a website for university students. It keeps your courses, weekly schedule and important dates in one place.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question">Is StudyHub free? <span class="faq-icon" aria-hidden="true">+</span>
+                        <button type="button" class="faq-question"><span class="faq-question-text">Is StudyHub free?</span> <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer">
                             <p>Yes. StudyHub is a free educational project made by AITU students.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question">Do I need an account? <span class="faq-icon" aria-hidden="true">+</span>
+                        <button type="button" class="faq-question"><span class="faq-question-text">Do I need an account?</span> <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer">
                             <p>No. All pages are open without an account. If you want, you can sign up on the Home page with the "Sign up for free" button.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question">Where can I see my weekly schedule? <span class="faq-icon" aria-hidden="true">+</span>
+                        <button type="button" class="faq-question"><span class="faq-question-text">Where can I see my weekly schedule?</span> <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer">
                             <p>Open the Schedule page. It has a weekly timetable with colored subjects and a list of important dates like midterms, finals and breaks.</p>
                         </div>
                     </div>
                     <div class="faq-item">
-                        <button type="button" class="faq-question">How fast will you answer my message? <span class="faq-icon" aria-hidden="true">+</span>
+                        <button type="button" class="faq-question"><span class="faq-question-text">How fast will you answer my message?</span> <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer">
                             <p>Usually within 1–2 working days. We reply by email or on campus, depending on what you choose in the contact form.</p>
@@ -203,6 +213,10 @@
         <script src="js/send-form.js" defer></script>
         <script src="js/validation.js" defer></script>
         <script src="js/accordion.js" defer></script>
+        <script src="js/faq-highlight.js" defer></script>
         <script src="js/keyboard-nav.js" defer></script>
+        <script src="js/progress-bar.js" defer></script>
+        <script src="js/toast.js" defer></script>
+        <script src="js/copy.js" defer></script>
     </body>
 </html>

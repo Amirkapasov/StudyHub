@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="vendor/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="images/logo.png" type="image/png">
+        <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header>
@@ -59,55 +61,55 @@
                         <div class="row g-3">
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/for_index.jpg" alt="Study room" class="img-fluid">
+                                    <img data-src="images/for_index.jpg" alt="Study room" class="img-fluid lazy">
                                     <span class="gallery-caption">Study room</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/course1.jpeg" alt="Web Technologies lesson" class="img-fluid">
+                                    <img data-src="images/course1.jpeg" alt="Web Technologies lesson" class="img-fluid lazy">
                                     <span class="gallery-caption">Web lesson</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/people.avif" alt="Group work" class="img-fluid">
+                                    <img data-src="images/people.avif" alt="Group work" class="img-fluid lazy">
                                     <span class="gallery-caption">Group work</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/course2.jpeg" alt="Programming lab" class="img-fluid">
+                                    <img data-src="images/course2.jpeg" alt="Programming lab" class="img-fluid lazy">
                                     <span class="gallery-caption">Programming lab</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/course3.jpeg" alt="Database lecture" class="img-fluid">
+                                    <img data-src="images/course3.jpeg" alt="Database lecture" class="img-fluid lazy">
                                     <span class="gallery-caption">Database lecture</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/library.jpg" alt="Library" class="img-fluid">
+                                    <img data-src="images/library.jpg" alt="Library" class="img-fluid lazy">
                                     <span class="gallery-caption">Library</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/team.jpg" alt="Team project" class="img-fluid">
+                                    <img data-src="images/team.jpg" alt="Team project" class="img-fluid lazy">
                                     <span class="gallery-caption">Team project</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/exam.jpg" alt="Exam week" class="img-fluid">
+                                    <img data-src="images/exam.jpg" alt="Exam week" class="img-fluid lazy">
                                     <span class="gallery-caption">Exam week</span>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4">
                                 <div class="gallery-item" tabindex="0">
-                                    <img src="images/campus.jpg" alt="Campus life" class="img-fluid">
+                                    <img data-src="images/campus.jpg" alt="Campus life" class="img-fluid lazy">
                                     <span class="gallery-caption">Campus life</span>
                                 </div>
                             </div>
@@ -228,5 +230,7 @@
         </footer>
         <script src="vendor/bootstrap.bundle.min.js"></script>
         <script src="js/keyboard-nav.js" defer></script>
+        <script src="js/progress-bar.js" defer></script>
+        <script src="js/lazy-load.js" defer></script>
     </body>
 </html>

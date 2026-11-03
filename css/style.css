@@ -838,3 +838,148 @@ body {
         height: 280px;
     }
 }
+
+/* поле поиска */
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: #1E293B;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #2563EB;
+}
+
+/* подсказки под полем */
+.search-suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-top: 4px !important;
+    list-style: none;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(15, 23, 43, 0.1);
+    overflow: hidden;
+}
+
+.suggestion-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #EFF6FF;
+    color: #2563EB;
+}
+
+/* подсветка в FAQ */
+.faq-section mark {
+    padding: 0 2px;
+    border-radius: 3px;
+    background-color: #FEF08A;
+    color: inherit;
+}
+
+.faq-search-count {
+    min-height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* полоска прогресса */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    z-index: 2000; /* поверх навбара */
+    border-radius: 0 4px 4px 0;
+    background: dodgerblue;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.7);
+}
+
+/* статистика на главной */
+.stats {
+    max-width: 1200px;
+}
+
+.stat-card {
+    height: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 40px;
+    font-weight: 800;
+    color: #2563EB;
+}
+
+.stat-label {
+    color: #475569;
+}
+
+/* уведомление */
+.toast-message {
+    display: none;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2000;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: #0F172A;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* кнопка копирования */
+.copy-btn {
+    position: relative;
+    border: none;
+    border-radius: 8px;
+    padding: 2px 8px;
+    background: white;
+    cursor: pointer;
+}
+
+.copy-btn.copied {
+    color: #16A34A;
+    font-weight: 700;
+}
+
+/* подсказка после копирования */
+.copy-btn.copied::after {
+    content: "Copied to clipboard!";
+    position: absolute;
+    bottom: 120%;
+    right: 0;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #0F172A;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* картинка ещё не загрузилась */
+.gallery-item img.lazy {
+    background: #E2E8F0;
+}
